@@ -2,8 +2,6 @@ package com.ssafy.snapfit.model.dto;
 
 import java.util.Date;
 
-import com.ssafy.snapfit.utils.Grade;
-
 public class Member {
 	private Grade grade; 
 	private long no;
