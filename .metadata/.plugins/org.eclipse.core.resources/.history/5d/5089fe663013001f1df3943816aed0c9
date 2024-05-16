@@ -1,0 +1,5 @@
+package com.ssafy.demo.model.dto;
+
+public class SearchCondition {
+
+}

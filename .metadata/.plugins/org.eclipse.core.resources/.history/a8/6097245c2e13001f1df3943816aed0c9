@@ -1,0 +1,6 @@
+package com.ssafy.demo.utils;
+
+public enum Grade {
+	Member,
+	Admin
+}
