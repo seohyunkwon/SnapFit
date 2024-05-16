@@ -1,0 +1,47 @@
+package com.ssafy.snapfit.security;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Date;
+
+import javax.crypto.SecretKey;
+
+import org.springframework.stereotype.Component;
+
+import com.ssafy.snapfit.model.dto.Member;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
+
+@Component
+public class JwtUtil {
+	private String key = "SnapFit_Secret_key_String_key_key";
+	private SecretKey secretKey = Keys.hmacShaKeyFor(key.getBytes(StandardCharsets.UTF_8));
+
+	public String createToken(Member member) {
+
+		// 유효시간 = 1시간
+		Date exp = new Date(System.currentTimeMillis() + 1000 * 60 * 60);
+
+		return Jwts.builder()
+				.header()
+				.add("typ", "JWT")
+				.and()
+				.claim("id", member.getId())
+				.claim("nickname", member.getNickname())
+				.expiration(exp)
+				.signWith(secretKey)
+				.compact();
+	}
+	
+	// 토큰 검증
+	// 유효기간이 지나면 에러 발생
+	public Jws<Claims> validate(String token) {
+		return Jwts.parser()
+				.verifyWith(secretKey)
+				.build()
+				.parseSignedClaims(token);
+	}
+
+}
