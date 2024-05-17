@@ -1,0 +1,10 @@
+package com.ssafy.snapfit.service;
+import com.ssafy.snapfit.model.dto.Member;
+
+public interface MemberService {
+
+	// 회원가입
+	public boolean signup(Member member);
+	
+	// 아이디로 멤버 찾기
+}

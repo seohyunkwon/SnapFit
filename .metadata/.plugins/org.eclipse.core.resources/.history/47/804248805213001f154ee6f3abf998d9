@@ -1,0 +1,7 @@
+package com.ssafy.snapfit.service;
+
+public interface MemberService {
+
+	
+	public boolean signup(Member member);
+}

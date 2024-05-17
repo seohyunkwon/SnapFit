@@ -3,7 +3,6 @@ package com.ssafy.snapfit.model.dto;
 import java.util.Date;
 
 public class Member {
-	private Grade grade; 
 	private long no;
 	private String id;
 	private String password;
@@ -14,9 +13,8 @@ public class Member {
 		
 	public Member() {}
 
-	public Member(Grade grade, long no, String id, String password, String nickname, String profileImg, Date birthDate,
+	public Member(long no, String id, String password, String nickname, String profileImg, Date birthDate,
 			int gender) {
-		this.grade = grade;
 		this.no = no;
 		this.id = id;
 		this.password = password;
@@ -33,14 +31,6 @@ public class Member {
 		this.profileImg = profileImg;
 		this.birthDate = birthDate;
 		this.gender = gender;
-	}
-
-	public Grade getGrade() {
-		return grade;
-	}
-
-	public void setGrade(Grade grade) {
-		this.grade = grade;
 	}
 
 	public long getNo() {
@@ -101,7 +91,7 @@ public class Member {
 
 	@Override
 	public String toString() {
-		return "Member [grade=" + grade + ", no=" + no + ", id=" + id + ", password=" + password + ", nickname="
+		return "Member [ no=" + no + ", id=" + id + ", password=" + password + ", nickname="
 				+ nickname + ", profileImg=" + profileImg + ", birth=" + birthDate + ", gender=" + gender + "]";
 	}
 }

@@ -1,0 +1,121 @@
+package com.ssafy.snapfit.security;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.util.StringUtils;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ssafy.snapfit.model.dto.Member;
+
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class JwtFilter extends UsernamePasswordAuthenticationFilter {
+	
+	private static final String AUTHORIZATION_HEADER = "Authorization";
+	private static final String BEARER_PREFIX = "Bearer ";
+	private static final Logger logger = LoggerFactory.getLogger(JwtFilter.class);
+	
+	@Autowired
+	private final JwtUtil jwtUtil;
+	
+	public JwtFilter(JwtUtil jwtUtil) {
+		this.jwtUtil = jwtUtil;
+	}
+
+	@Override
+	public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
+			throws AuthenticationException {
+		logger.info("JwtAuthenticationFilter 로그인 : 진입");
+		
+		// 로그인 요청 시 들어온 데이터를 객체로 변환
+		ObjectMapper objectMapper = new ObjectMapper();
+		Member member = null;
+		
+		try {
+			member = objectMapper.readValue(request.getInputStream(), Member.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("member = "+member);
+		
+		// 사용자 정보로 토큰 생성
+		String token = jwtUtil.createToken(member);
+		
+		// 토큰을 헤더에 설정
+		response.setHeader("Authorization", "Bearer "+ token);
+		response.setStatus(HttpStatus.OK.value());
+		
+		
+		// 인증정보 반환
+		return jwtUtil.autenticate(token);
+	}
+	
+	
+
+
+	@Override
+	protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain,
+			Authentication authResult) throws IOException, ServletException {
+		 // 사용자 정보로 토큰 생성
+       System.out.println("authResult");
+        // 토큰을 헤더에 설정
+//        response.setHeader("Authorization", "Bearer " + token);
+        response.setStatus(HttpStatus.OK.value());
+        
+        // JSON 응답으로 반환
+        Map<String, String> responseBody = new HashMap<>();
+//        responseBody.put("token", token);
+
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(new ObjectMapper().writeValueAsString(responseBody));
+
+	}
+
+	// 필터링 로직
+	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+			throws ServletException, IOException {
+		try {
+			// 요청에서 토큰 추출
+			String token = resolveToken(request);
+			
+			// 토큰 유효한지 확인
+			if(StringUtils.hasText(token) && jwtUtil.validateToken(token)) {
+				// 인증정보 추출 뒤 SecurityContext에 설정
+				logger.info("doFilterInternal 진입");
+				System.out.println("doFilter");
+				Authentication authentication = jwtUtil.autenticate(token);
+				SecurityContextHolder.getContext().setAuthentication(authentication);
+			}
+		} catch (Exception e) {
+			logger.error("Count not set user authentication in security conext", e);
+		}
+		
+		filterChain.doFilter(request, response);
+		
+	}
+	
+	// Request Header에서 토큰 정보 꺼내오기
+	private String resolveToken(HttpServletRequest request) {
+		String bearerToken = request.getHeader(AUTHORIZATION_HEADER);
+		if(StringUtils.hasText(bearerToken) && bearerToken.startsWith(BEARER_PREFIX)) {
+			return bearerToken.substring(7);
+		}
+		return null;
+	}
+
+}

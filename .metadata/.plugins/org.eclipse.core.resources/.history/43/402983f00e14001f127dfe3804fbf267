@@ -1,0 +1,25 @@
+package com.ssafy.snapfit.service;
+
+import com.ssafy.snapfit.model.dto.LikeVideo;
+
+public class LikeVideoServiceImpl implements LikeVideoService {
+
+	@Override
+	public boolean addLikeVideo(LikeVideo likeVideo) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removeLikeVideo(LikeVideo likeVideo) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isLiked(LikeVideo likeVideo) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

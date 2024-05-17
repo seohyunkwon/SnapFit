@@ -1,0 +1,43 @@
+package com.ssafy.snapfit.security;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import com.ssafy.snapfit.model.dao.MemberDao;
+import com.ssafy.snapfit.model.dto.Member;
+
+public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService {
+
+	@Autowired
+	private final MemberDao memberDao;
+	@Autowired
+	private final PasswordEncoder passwordEncoder;
+	
+	private final Logger logger = LoggerFactory.getLogger(UserDetailsService.class);
+	
+	public UserDetailsService(MemberDao memberDao, PasswordEncoder passwordEncoder) {
+		this.memberDao = memberDao;
+		this.passwordEncoder = passwordEncoder;
+	}
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		Member member = memberDao.selectMemberById(username);
+		
+		if(member == null) throw new UsernameNotFoundException("Cout not found user");
+		
+		logger.info("Success find member ", member);
+		
+		return User.builder()
+				.username(member.getId())
+				.password(passwordEncoder.encode(member.getPassword()))
+				.roles("USER")
+				.build();
+	}
+
+}

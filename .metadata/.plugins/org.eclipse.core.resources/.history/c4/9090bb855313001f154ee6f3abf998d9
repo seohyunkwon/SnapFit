@@ -1,0 +1,22 @@
+package com.ssafy.snapfit.service;
+
+import com.ssafy.snapfit.model.dao.MemberDao;
+import com.ssafy.snapfit.model.dto.Member;
+
+public class MemberServiceImpl implements MemberService {
+	
+	private final MemberDao memberDao;
+
+	public MemberServiceImpl(MemberDao memberDao) {
+		this.memberDao = memberDao;
+	}
+
+	@Override
+	public boolean signup(Member member) {
+		int result = memberDao.insertMember(member);
+		return result == 1;
+	}
+	
+	
+
+}
