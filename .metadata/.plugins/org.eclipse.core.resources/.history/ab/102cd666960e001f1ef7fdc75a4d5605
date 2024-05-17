@@ -1,0 +1,46 @@
+package com.ssafy.fit.model.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.ssafy.fit.model.dao.ReviewDao;
+import com.ssafy.fit.model.dto.Review;
+
+@Service
+public class ReviewServiceImpl implements ReviewService {
+
+	// 의존성 주입
+	private ReviewDao reviewDao;
+		
+	private ReviewServiceImpl(ReviewDao reviewDao) {
+		this.reviewDao = reviewDao;
+	}
+	
+	@Override
+	public List<Review> getReviewListByVideoId(int videoId) {
+		return reviewDao.selectByVideoId(videoId);
+	}
+
+	@Override
+	public Review getReview(int reviewId) {
+		return reviewDao.selectOne(reviewId);
+	}
+
+	@Override
+	public int writeReview(Review review) {
+		return reviewDao.insertReview(review);
+	}
+
+	@Override
+	public int modifyReview(int reviewId, Review review) {
+		review.setId(reviewId);
+		return reviewDao.updateReview(review);
+	}
+
+	@Override
+	public int removeReview(int reviewId) {
+		return reviewDao.deleteReview(reviewId);
+	}
+
+}

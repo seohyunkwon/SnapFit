@@ -1,0 +1,5 @@
+package com.ssafy.snapfit.config;
+
+public class MyBatisConfig {
+
+}

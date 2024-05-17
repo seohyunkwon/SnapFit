@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.snapfit.model.dao.VideoDao">
+	
+	<!-- 1-1. 전체 영상 조회하기(가져오기) -->
+	<select id="selectAllVideos" resultType="Video">
+		SELECT * FROM Video
+	</select>
+	
+	<!-- 1-2. 전체 영상 중에서 검색해서 조회하기(가져오기) -->
+	<select id="searchVideos" parameterType="SearchCondition" resultType="Video">
+		
+		<choose>
+			
+			<!-- 정렬 기준이 존재할 때 -->
+			<when test="orderBy != null">
+			
+				<!-- 우선, 조인된 테이블을 생성 -->
+				<choose>
+				
+					<!-- 정렬 기준이 좋아요이면 "좋아요(영상)" 테이블과 조인하자. -->
+					<when test="orderBy == 'like'">
+						
+						SELECT Video.no AS no, uploader_no, exercise_no, title, content, created_date, COUNT(*) AS `like`
+						FROM Video, Like_Video
+						WHERE Video.no = Like_Video.video_no
+						
+						<if test="key != null">
+							AND ${key} LIKE concat('%', #{value}, '%')
+						</if>
+						
+						GROUP BY Video.no
+						ORDER BY `like` ${orderByDir}
+					
+					</when>
+					
+					<!-- 정렬 기준이 댓글의 개수이면 "댓글" 테이블과 조인하자. -->
+					<when test="orderBy == 'comment'">
+						
+						SELECT Video.no AS no, uploader_no, exercise_no, title, Video.content AS content, Video.created_date AS created_date, COUNT(*) AS number_of_comments
+						FROM Video, Comment
+						WHERE Video.no = Comment.video_no
+						
+						<if test="key != null">
+							AND Video.${key} LIKE concat('%', #{value}, '%')
+						</if>
+						
+						GROUP BY Video.no
+						ORDER BY number_of_comments ${orderByDir}
+						
+					</when>
+					
+					<!-- orderBy가 null이 아니고, 좋아요와 댓글수도 정렬 기준이 아니라면 영상 생성일자를 기준으로 하자. -->
+					<!-- 정렬 기준이 존재하지 않을 때와는 다르게 orderByDir로 오름차순과 내림차순 모두 선택할 수 있다. -->
+					<otherwise>
+						
+						SELECT *
+						FROM Video
+						
+						<if test="key != null">
+							WHERE ${key} LIKE concat('%', #{value}, '%')
+						</if>
+						
+						ORDER BY created_date ${orderByDir}
+						
+					</otherwise>
+				
+				</choose>
+				
+			</when>
+			
+			<!-- 정렬 기준이 존재하지 않을 때 (최근 생성일자 순으로 정렬할 것) -->
+			<otherwise>
+			
+				SELECT *
+				FROM Video
+			
+				<if test="key != null">
+					WHERE ${key} LIKE concat('%', #{value}, '%')
+				</if>
+				
+				ORDER BY created_date DESC
+			
+			</otherwise>
+		
+		</choose>
+		
+	</select>
+	
+	<!-- 1-3. 전체 영상 단위에서 하나의 영상 등록하기(삽입하기) -->
+	<insert id="insertVideo" parameterType="Video">
+		INSERT INTO Video
+		(uploader_no, exercise_no, title, content) VALUES
+		(#{uploaderNo}, #{exerciseNo}, #{title}, #{content})
+	</insert>
+	
+	<!-- 1-4. 전체 영상 단위에서 PK로 특정 영상 삭제하기 (수정 기능은 X) -->
+	<delete id="deleteVideo" parameterType="long">
+		DELETE FROM Video
+		WHERE no = #{videoId}
+	</delete>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
