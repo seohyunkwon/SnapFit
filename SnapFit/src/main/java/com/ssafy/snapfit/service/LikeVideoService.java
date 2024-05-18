@@ -11,6 +11,6 @@ public interface LikeVideoService {
 	boolean removeLikeVideo(LikeVideo likeVideo);
 	
 	// 좋아요 여부 확인
-	boolean isLiked(LikeVideo likeVideo);
+	boolean isLiked(long videoNo, long memberNo);
 	
 }

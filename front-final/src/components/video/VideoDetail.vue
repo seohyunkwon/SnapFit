@@ -1,12 +1,14 @@
 <template>
     <div class="video">
         <!-- video -->
-        <video src="@/assets/videos/video_01.mp4" autoplay loop></video>
+        <video>
+            <source :src="`@/assets/videos/video_${video.no}.mp4`" type="video/mp4" autoplay loop>
+        </video>
 
         <!-- content -->
         <div class="content">
-            <h5>혀기의 상체운동</h5>
-            <p>밭대 헬스장에서 운동하는 혀기,,,<br>화이팅..!<br>줄넘김<br>test</p>
+            <h5>{{ video.title }}</h5>
+            <p>{{ video.content }}</p>
         </div>
 
         <!-- like, comment, share -->
@@ -26,21 +28,36 @@
         </div>
         <CommentDetail v-if="isCommentVisiable" @close-modal="closeComment"></CommentDetail>
     </div>
-
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import CommentDetail from '@/components/video/CommentDetail.vue'
+import { ref, onMounted, defineProps } from 'vue'
+import { defineConfig } from 'vite';
+import CommentDetail from '@/components/comment/CommentDetail.vue'
+
+const props = defineProps({
+    video: {
+        type: Object,
+        required: true
+    }
+})
+
+const config = defineConfig({
+    assetsInclude: ['**/*.mov', '**/*.mp4']
+})
+
 const isCommentVisiable = ref(false)
 
-const showCommentDetail = function() {
+const showCommentDetail = () => {
     isCommentVisiable.value = true;
 }
 
-const closeComment = function() {
+const closeComment = () => {
     isCommentVisiable.value = false;
 }
+
+
+ 
 </script>
 
 <style scoped>
@@ -69,9 +86,11 @@ video {
     color: white;
     text-align: start;
 }
+
 .content h5 {
     font-weight: 600;
 }
+
 .icon {
     width: 45px;
     filter: invert(100%) sepia(12%) saturate(7500%) hue-rotate(181deg) brightness(110%) contrast(111%);
@@ -107,6 +126,5 @@ video {
     100% {
         transform: rotate(0deg);
     }
-
 }
 </style>

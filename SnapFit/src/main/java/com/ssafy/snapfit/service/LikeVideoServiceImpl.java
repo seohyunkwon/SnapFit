@@ -27,7 +27,8 @@ public class LikeVideoServiceImpl implements LikeVideoService {
 	}
 
 	@Override
-	public boolean isLiked(LikeVideo likeVideo) {
+	public boolean isLiked(long videoNo, long memberNo) {
+		LikeVideo likeVideo = new LikeVideo(videoNo, memberNo);
 		int result = likeVideoDao.countLikeVideo(likeVideo);
 		return result > 0;
 	}

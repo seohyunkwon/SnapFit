@@ -11,6 +11,6 @@ public interface LikeCommentService {
 	boolean removeLikeComment(LikeComment likeComment);
 	
 	// 좋아요 여부 확인
-	boolean isLiked(LikeComment likeComment);
+	boolean isLiked(long commentNo, long memberNo);
 	
 }

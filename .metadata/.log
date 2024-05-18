@@ -2259,7 +2259,6 @@ Binding(CTRL+D,
 !ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-16 13:30:16.621
 !MESSAGE Classpath changed for project: SnapFit
 
-!ENTRY org.eclipse.jdt.core 4 4 2024-05-16 16:25:14.972
 !MESSAGE Failed to save JDT index: Index for /SnapFit
 !STACK 0
 java.io.IOException: Failed to read index data from file:/C:/Users/s_hyunmong/Desktop/snapfit/.metadata/.plugins/org.eclipse.jdt.core/524668472.index at offset 332 and size 275407222
@@ -2275,6 +2274,31 @@ java.io.IOException: Failed to read index data from file:/C:/Users/s_hyunmong/De
 	at java.base/java.lang.Thread.run(Thread.java:833)
 Caused by: java.lang.OutOfMemoryError: Java heap space
 
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-16 13:48:49.887
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-16 13:48:49.911
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-16 13:48:49.912
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-16 13:48:49.914
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-16 13:48:49.915
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-16 13:48:49.923
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-16 13:48:49.928
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.jface 2 0 2024-05-16 13:51:26.593
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-05-16 13:51:26.593
+=======
 !ENTRY org.eclipse.jdt.core 4 0 2024-05-16 16:25:15.266
 !MESSAGE Failed to update qualified index.
 !STACK 0
@@ -2981,6 +3005,7 @@ java.io.IOException: Failed to read index data from file:/C:/Users/s_hyunmong/De
 	at org.eclipse.jdt.internal.core.index.Index.getMetaIndexQualifications(Index.java:259)
 	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$MetaIndexUpdateRequest.execute(IndexManager.java:1789)
 	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:514)
+<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:833)
 Caused by: java.lang.OutOfMemoryError: Java heap space
 
@@ -13157,6 +13182,730 @@ java.lang.UnsupportedOperationException: No language server has registered to ha
 !MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 13:41:26.064
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+=======
+>>>>>>> 27b17ddb4f33f8a77fb5c542dcd227eca4c2a79a
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:14:21.498
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:14:21.923
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:14:21.950
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:14:21.951
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:14:25.116
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:14:25.410
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:14:25.439
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:14:25.440
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:14:28.814
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:14:29.078
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:14:29.115
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:14:29.116
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:14:39.957
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:14:40.199
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:14:40.227
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:14:40.227
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-05-18 14:14:43.117
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:14:44.324
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:14:44.921
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:14:44.949
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:14:44.950
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:14:49.109
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:14:49.400
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:14:49.428
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:14:49.429
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:15:58.912
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:15:59.111
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:15:59.142
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:15:59.143
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:16:05.893
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:16:06.237
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:16:06.268
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:16:06.269
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:16:21.941
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:16:22.191
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:16:22.220
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:16:22.220
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:16:41.333
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:16:41.861
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:16:41.894
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:16:41.896
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:17:07.851
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:17:08.273
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:17:08.301
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:17:08.302
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:17:09.411
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:17:09.444
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:17:09.445
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:17:58.198
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:17:58.499
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:17:58.529
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:17:58.530
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:18:35.006
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:18:35.220
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:18:35.268
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:18:35.269
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:18:52.130
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:18:53.251
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:18:53.286
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:18:53.287
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:19:14.640
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:19:14.897
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:19:14.927
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:19:14.927
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:19:39.130
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:19:39.453
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:19:39.483
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:19:39.483
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:20:00.649
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:20:00.865
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:20:00.899
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:20:00.900
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:20:07.825
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:20:08.331
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:20:08.367
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:20:08.368
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:20:17.369
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:20:17.574
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:20:17.632
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:20:17.633
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:23:12.135
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:23:13.084
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:23:13.118
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:23:13.119
+!MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-05-18 14:23:18.573
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1249)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1225)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:838)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-18 14:23:18.769
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-18 14:23:18.807
+!MESSAGE executing callback sts4.classpath.HRumVoTb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-18 14:23:18.807
 !MESSAGE No language server has registered to handle command 'sts4.classpath.HRumVoTb'
 !STACK 0
 java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.HRumVoTb'

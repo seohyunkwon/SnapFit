@@ -27,7 +27,8 @@ public class LikeCommentServiceImpl implements LikeCommentService {
 	}
 
 	@Override
-	public boolean isLiked(LikeComment likeComment) {
+	public boolean isLiked(long commentNo, long memberNo) {
+		LikeComment likeComment = new LikeComment(memberNo, commentNo);
 		int result = likeCommentDao.countLikeComment(likeComment);
 		return result > 0;
 	}
