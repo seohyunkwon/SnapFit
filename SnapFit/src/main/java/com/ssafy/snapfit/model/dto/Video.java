@@ -9,6 +9,8 @@ public class Video {
 	private String uploaderName;
 	private long exerciseNo;
 	private String exerciseName;
+	private long likeCount;
+	private long commentCount;
 	private String title;
 	private String content;
 	private Date createdDate;
@@ -44,6 +46,20 @@ public class Video {
 		this.content = content;
 	}
 
+	public Video(long no, long uploaderNo, String uploaderName, long exerciseNo, String exerciseName, long likeCount,
+			long commentCount, String title, String content, Date createdDate) {
+		this.no = no;
+		this.uploaderNo = uploaderNo;
+		this.uploaderName = uploaderName;
+		this.exerciseNo = exerciseNo;
+		this.exerciseName = exerciseName;
+		this.likeCount = likeCount;
+		this.commentCount = commentCount;
+		this.title = title;
+		this.content = content;
+		this.createdDate = createdDate;
+	}
+
 	public long getNo() {
 		return no;
 	}
@@ -60,12 +76,44 @@ public class Video {
 		this.uploaderNo = uploaderNo;
 	}
 
+	public String getUploaderName() {
+		return uploaderName;
+	}
+
+	public void setUploaderName(String uploaderName) {
+		this.uploaderName = uploaderName;
+	}
+
 	public long getExerciseNo() {
 		return exerciseNo;
 	}
 
 	public void setExerciseNo(long exerciseNo) {
 		this.exerciseNo = exerciseNo;
+	}
+
+	public String getExerciseName() {
+		return exerciseName;
+	}
+
+	public void setExerciseName(String exerciseName) {
+		this.exerciseName = exerciseName;
+	}
+
+	public long getLikeCount() {
+		return likeCount;
+	}
+
+	public void setLikeCount(long likeCount) {
+		this.likeCount = likeCount;
+	}
+
+	public long getCommentCount() {
+		return commentCount;
+	}
+
+	public void setCommentCount(long commentCount) {
+		this.commentCount = commentCount;
 	}
 
 	public String getTitle() {
@@ -92,27 +140,11 @@ public class Video {
 		this.createdDate = createdDate;
 	}
 
-	public String getUploaderName() {
-		return uploaderName;
-	}
-
-	public void setUploaderName(String uploaderName) {
-		this.uploaderName = uploaderName;
-	}
-
-	public String getExerciseName() {
-		return exerciseName;
-	}
-
-	public void setExerciseName(String exerciseName) {
-		this.exerciseName = exerciseName;
-	}
-
 	@Override
 	public String toString() {
 		return "Video [no=" + no + ", uploaderNo=" + uploaderNo + ", uploaderName=" + uploaderName + ", exerciseNo="
-				+ exerciseNo + ", exerciseName=" + exerciseName + ", title=" + title + ", content=" + content
-				+ ", createdDate=" + createdDate + "]";
+				+ exerciseNo + ", exerciseName=" + exerciseName + ", likeCount=" + likeCount + ", commentCount="
+				+ commentCount + ", title=" + title + ", content=" + content + ", createdDate=" + createdDate + "]";
 	}
 	
 }
