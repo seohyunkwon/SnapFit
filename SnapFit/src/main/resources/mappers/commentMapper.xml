@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.snapfit.model.dao.CommentDao">
+	
+	<!-- 1-1. 특정 영상에 대해 좋아요 또는 최신순으로 모든 댓글 조회하기(가져오기) -->
+	<select id="selectAllComments" parameterType="map" resultType="Comment">
+	
+		<choose>
+		
+			<!-- orderBy가 `like`이면 좋아요 숫자를 기준으로 정렬 -->
+			<when test="sc.orderBy == 'like'">
+				
+				SELECT Comment.no AS no, video_no, Comment.member_no AS member_no, content, created_date, COUNT(*) AS `like`
+				FROM Comment, Like_Comment
+				WHERE Comment.no = Like_Comment.comment_no
+				GROUP BY Comment.no
+				HAVING Comment.video_no = ${videoNo}
+				
+				<choose>
+				
+					<when test="sc.orderByDir == ASC">
+						ORDER BY `like` ASC
+					</when>
+					
+					<otherwise>
+						ORDER BY `like` DESC
+					</otherwise>
+				
+				</choose>
+				
+			</when>
+			
+			<!-- orderBy가 created_date이면 생성일자를 기준으로 정렬 -->
+			<when test="sc.orderBy == 'created_date'">
+			
+				SELECT *
+				FROM Comment
+				WHERE video_no = ${videoNo}
+				
+				<choose>
+				
+					<when test="sc.orderByDir == ASC">
+						ORDER BY created_date ASC
+					</when>
+					
+					<otherwise>
+						ORDER BY created_date DESC
+					</otherwise>
+				
+				</choose>
+				
+			</when>
+			
+			<!-- 그 외의 모든 경우는 좋아요가 많은 순으로 정렬 -->
+			<otherwise>
+			
+				SELECT Comment.no AS no, video_no, Comment.member_no AS member_no, content, created_date, COUNT(*) AS `like`
+				FROM Comment, Like_Comment
+				WHERE Comment.no = Like_Comment.comment_no
+				GROUP BY Comment.no
+				HAVING Comment.video_no = ${videoNo}
+				ORDER BY `like` DESC
+			
+			</otherwise>
+		
+		</choose>
+	
+	</select>
+	
+</mapper>
