@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.ssafy.snapfit.model.dao.MemberDao;
 import com.ssafy.snapfit.model.dto.Member;
+import com.ssafy.snapfit.model.dto.SearchCondition;
 
 @Service
 public class MemberServiceImpl implements MemberService {
@@ -29,13 +30,8 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public Member findMemberById(String id) {
-		return memberDao.selectMemberById(id);
-	}
-
-	@Override
-	public Member findMemberByNo(long no) {
-		return memberDao.selectMemberByNo(no);
+	public Member findMember(SearchCondition sc) {
+		return memberDao.selectMember(sc);
 	}
 
 	@Override

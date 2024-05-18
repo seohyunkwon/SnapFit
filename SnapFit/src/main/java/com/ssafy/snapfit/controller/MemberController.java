@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ssafy.snapfit.model.dto.Member;
+import com.ssafy.snapfit.model.dto.SearchCondition;
 import com.ssafy.snapfit.security.JwtUtil;
 import com.ssafy.snapfit.service.MemberService;
 
@@ -63,23 +64,15 @@ public class MemberController {
 		return ResponseEntity.ok().body(token);
 	}
 
-	@GetMapping("/member/{id}")
-	public ResponseEntity<?> getMemberById(@PathVariable String id) {
-		Member member = memberService.findMemberById(id);
+	@PostMapping("/member")
+	public ResponseEntity<?> findMember(@RequestBody SearchCondition sc) {
+		Member member = memberService.findMember(sc);
 		if (member == null) {
 			return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
 		}
 		return new ResponseEntity<Member>(member, HttpStatus.OK);
 	}
-	
-	@GetMapping("/member/{no}")
-	public ResponseEntity<?> getMemberByNo(@PathVariable long no) {
-		Member member = memberService.findMemberByNo(no);
-		if (member == null) {
-			return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
-		}
-		return new ResponseEntity<Member>(member, HttpStatus.OK);
-	}
+
 
 	@PutMapping("/member/{no}")
 	public ResponseEntity<?> modify(@PathVariable long no, @RequestBody Member member) {

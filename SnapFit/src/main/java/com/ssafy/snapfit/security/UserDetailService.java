@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.ssafy.snapfit.model.dao.MemberDao;
 import com.ssafy.snapfit.model.dto.Member;
+import com.ssafy.snapfit.model.dto.SearchCondition;
 
 @Service
 public class UserDetailService implements UserDetailsService {
@@ -29,7 +30,7 @@ public class UserDetailService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
-		Member member = memberDao.selectMemberById(username);
+		Member member = memberDao.selectMember(new SearchCondition("id", username, null, null));
 		
 		if(member == null) throw new UsernameNotFoundException("Cout not found user");
 
