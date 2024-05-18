@@ -1,0 +1,86 @@
+package com.ssafy.snapfit.security;
+
+import java.io.IOException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.util.StringUtils;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ssafy.snapfit.model.dto.Member;
+
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class JwtFilter extends UsernamePasswordAuthenticationFilter {
+
+    private static final Logger logger = LoggerFactory.getLogger(JwtFilter.class);
+
+    private final JwtUtil jwtUtil;
+    private final AuthenticationManager authenticationManager;
+
+    public JwtFilter(JwtUtil jwtUtil, AuthenticationManager authenticationManager) {
+        this.jwtUtil = jwtUtil;
+        this.authenticationManager = authenticationManager;
+    }
+
+    @Override
+    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        Member member;
+        try {
+            member = objectMapper.readValue(request.getInputStream(), Member.class);
+        } catch (IOException e) {
+            logger.error("Failed to parse login data", e);
+            return null;
+        }
+        return authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(member.getId(), member.getPassword())
+        );
+    }
+
+    @Override
+    protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response,
+                                            FilterChain chain, Authentication authResult) throws IOException {
+        String token = jwtUtil.createToken(authResult.getName());
+        response.addHeader("Authorization", "Bearer " + token);
+        response.getWriter().write("{\"token\":\"" + token + "\"}");
+        response.getWriter().flush();
+    }
+
+    @Override
+    protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response,
+                                              org.springframework.security.core.AuthenticationException failed)
+            throws IOException {
+        logger.error("Failed authentication attempt", failed);
+        response.sendError(HttpStatus.UNAUTHORIZED.value(), "Authentication failed");
+    }
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+            throws IOException {
+        String token = resolveToken(request);
+        if (StringUtils.hasText(token) && jwtUtil.validateToken(token)) {
+            Authentication authentication = jwtUtil.getAuthentication(token);
+            if (authentication != null) {
+                SecurityContextHolder.getContext().setAuthentication(authentication);
+            }
+        }
+        filterChain.doFilter(request, response);
+    }
+
+    private String resolveToken(HttpServletRequest request) {
+        String bearerToken = request.getHeader("Authorization");
+        if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
+            return bearerToken.substring(7);
+        }
+        return null;
+    }
+}

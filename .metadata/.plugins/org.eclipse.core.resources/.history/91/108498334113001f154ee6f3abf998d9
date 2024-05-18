@@ -1,0 +1,27 @@
+package com.ssafy.snapfit.service;
+
+import java.util.List;
+
+import com.ssafy.snapfit.model.dao.FollowDao;
+import com.ssafy.snapfit.model.dto.Member;
+
+public class FollowService {
+	
+	private final FollowDao followDao;
+
+	public FollowService(FollowDao followDao) {
+		this.followDao = followDao;
+	}
+	
+	public List<Member> getFollowers(long no) {
+		return followDao.selectFollowersByNo(no);
+	}
+	
+	public List<Member> getFollowings(long no) {
+		return followDao.selectFollowingsByNo(no);
+	}
+	
+	public static void main(String[] args) {
+		List<Member> followers = getFollowers(1);
+	}
+}

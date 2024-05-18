@@ -1,0 +1,14 @@
+package com.ssafy.snapfit.service;
+
+import com.ssafy.snapfit.model.dao.FollowDao;
+
+public class FollowService {
+	
+	private final FollowDao followDao;
+
+	public FollowService(FollowDao followDao) {
+		this.followDao = followDao;
+	}
+	
+	
+}

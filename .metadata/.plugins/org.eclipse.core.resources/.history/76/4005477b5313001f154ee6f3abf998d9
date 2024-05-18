@@ -1,0 +1,39 @@
+package com.ssafy.snapfit.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ssafy.snapfit.model.dto.Member;
+import com.ssafy.snapfit.service.MemberService;
+
+@RestController
+public class MemberController {
+	
+	@Autowired
+	private final MemberService memberService;
+
+	@Autowired
+	private final PasswordEncoder passwordEncoder;
+
+	public MemberController(MemberService memberService, PasswordEncoder passwordEncoder) {
+		this.memberService = memberService;
+		this.passwordEncoder = passwordEncoder;
+	}
+
+
+
+	@PostMapping("/signup")
+	public ResponseEntity<?> signup(@RequestBody Member member) {
+		if(memberService.signup(member)) {
+			return new ResponseEntity<Void>(HttpStatus.CREATED);
+		}
+		
+		return new ResponseEntity<Void>(HttpStatus.BAD_REQUEST);
+	}
+
+}

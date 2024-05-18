@@ -1,0 +1,26 @@
+package com.ssafy.snapfit.security;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import io.jsonwebtoken.Jwts;
+
+public class JwtTest {
+	public static void main(String[] args) {
+		Map<String, String> headers = new HashMap<>();
+		headers.put("typ", "JWT");
+		headers.put("name", "yang");
+		
+		Jwts.builder()
+		// header
+		.header()
+		.add(headers)
+		.and()
+		.subject("SnapFit")
+		// 만료 시간
+		.expiration(new Date(System.currentTimeMillis() + 3000))
+		// 서명
+		.signWith(null)
+	}
+}

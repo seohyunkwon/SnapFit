@@ -1,0 +1,32 @@
+package com.ssafy.snapfit.service;
+
+import com.ssafy.snapfit.model.dao.LikeVideoDao;
+import com.ssafy.snapfit.model.dto.LikeVideo;
+
+public class LikeCommentServiceImpl implements LikeVideoService {
+
+	private final LikeVideoDao likeVideoDao;
+	
+	public LikeCommentServiceImpl(LikeVideoDao likeVideoDao) {
+		this.likeVideoDao = likeVideoDao;
+	}
+
+	@Override
+	public boolean addLikeVideo(LikeVideo likeVideo) {
+		int result = likeVideoDao.insertLikeVideo(likeVideo);
+		return result == 1;
+	}
+
+	@Override
+	public boolean removeLikeVideo(LikeVideo likeVideo) {
+		int result = likeVideoDao.deleteLikeVideo(likeVideo);
+		return result == 1;
+	}
+
+	@Override
+	public boolean isLiked(LikeVideo likeVideo) {
+		int result = likeVideoDao.countLikeVideo(likeVideo);
+		return result > 0;
+	}
+
+}

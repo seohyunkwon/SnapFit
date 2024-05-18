@@ -1,0 +1,19 @@
+package com.ssafy.snapfit.model.dao;
+
+import com.ssafy.snapfit.model.dto.Member;
+import com.ssafy.snapfit.model.dto.SearchCondition;
+
+public interface MemberDao {
+	
+	// 회원 생성
+	int insertMember(Member member);
+	
+	// 멤버 찾기
+	Member selectMember(SearchCondition sc);
+	
+	// 회원 정보 수정
+	int updateMember(Member member);
+	
+	// 회원 삭제
+	int deleteMember(long no);
+}

@@ -1,0 +1,57 @@
+package com.ssafy.snapfit.security;
+
+import java.io.IOException;
+import java.security.SignatureException;
+import java.util.Collections;
+
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.util.StringUtils;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import io.jsonwebtoken.Claims;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class JwtFilter extends OncePerRequestFilter {
+
+    private final JwtUtil jwtUtil;
+
+    public JwtFilter(JwtUtil jwtUtil) {
+        this.jwtUtil = jwtUtil;
+    }
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+            throws ServletException, IOException {
+        String token = resolveToken(request);
+        try {
+			if (StringUtils.hasText(token) && jwtUtil.validateToken(token)) {
+			    Claims claims = jwtUtil.getUserInfoFromToken(token);
+			    String id = claims.getSubject();
+			    String role = claims.get("role", String.class);
+			    UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
+			            id,
+			            null,
+			            Collections.singleton(new SimpleGrantedAuthority(role))
+			    );
+			    authenticationToken.setDetails(token);
+			}
+		} catch (SignatureException e) {
+			logger.error("doFilterInternal = ",e);
+			e.printStackTrace();
+		}
+        filterChain.doFilter(request, response);
+    }
+  
+
+    private String resolveToken(HttpServletRequest request) {
+        String bearerToken = request.getHeader("Authorization");
+        if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
+            return bearerToken.substring(7);
+        }
+        return null;
+    }
+}

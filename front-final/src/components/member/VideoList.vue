@@ -15,7 +15,7 @@ import VideoDetail from '@/components/video/VideoDetail.vue';
 
 <style scoped>
 .video-list {
-    width: 100%;n
+    width: 100%;
     height: 464px;
     overflow-y: auto;
     max-height: calc(100vh - 150px);
