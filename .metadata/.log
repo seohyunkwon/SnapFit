@@ -1,0 +1,1771 @@
+!SESSION 2024-05-24 00:07:34.652 -----------------------------------------------
+eclipse.buildId=4.19.0.202306150758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-05-24 00:07:39.328
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY org.eclipse.jface 2 0 2024-05-24 00:08:29.730
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-05-24 00:08:29.730
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-05-24 00:08:41.578
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\s_hyunmong'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-24 00:10:53.384
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-24 00:10:54.096
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-24 00:10:57.406
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-24 00:10:59.852
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\sts-4.19.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin\javaw.exe
+-cp
+C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\classes;C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Dlsp.completions.indentation.enable=true
+-Xmx1024m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/Users/s_hyunmong/Desktop/SnapFit/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1716477059851
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-24 00:10:59.853
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-24 00:10:59.871
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 22516
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-05-24 00:10:59.920
+!MESSAGE org.springframework.ide.vscode.commons.protocol.spring.SpringModelLanguageServer cannot be found by org.springframework.tooling.boot.ls_1.47.0.202306150731
+!STACK 0
+java.lang.ClassNotFoundException: org.springframework.ide.vscode.commons.protocol.spring.SpringModelLanguageServer cannot be found by org.springframework.tooling.boot.ls_1.47.0.202306150731
+	at org.eclipse.osgi.internal.loader.BundleLoader.generateException(BundleLoader.java:541)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:536)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:622)
+	at org.eclipse.lsp4e.LanguageServersRegistry$ExtensionLanguageServerDefinition.getServerInterface(LanguageServersRegistry.java:196)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$1(LanguageServerWrapper.java:291)
+	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+
+!ENTRY org.eclipse.jface 2 0 2024-05-24 00:11:00.619
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-05-24 00:11:00.619
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.text.delete.line"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.match_pair_outward,Match Pair Outward,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		WorkbenchHandlerServiceHandler("io.emmet.eclipse.commands.match_pair_outward"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-24 00:11:07.114
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-24 00:11:07.148
+!MESSAGE Boot project ADDED: SnapFit
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-24 00:11:07.149
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-24 00:11:07.153
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-24 00:11:07.343
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-24 00:11:09.044
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.eclipse.jface 2 0 2024-05-24 00:27:02.039
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-05-24 00:27:02.039
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-05-24 00:27:02.039
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.addBlockCommentCommand,Add Block Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.addBlockCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.toggle_comment,Toggle Comment,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		WorkbenchHandlerServiceHandler("io.emmet.eclipse.commands.toggle_comment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-24 00:28:14.324
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-24 00:28:14.326
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-24 00:28:14.328
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-24 00:28:14.330
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-24 00:28:14.347
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-05-24 00:28:14.356
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+!SESSION 2024-06-05 20:20:10.976 -----------------------------------------------
+eclipse.buildId=4.19.0.202306150758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-06-05 20:20:16.963
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-06-05 20:20:24.491
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2024-06-05 20:21:17.923
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-05 20:21:17.923
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-05 20:21:25.907
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\sts-4.19.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin\javaw.exe
+-cp
+C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\classes;C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Dlsp.completions.indentation.enable=true
+-Xmx1024m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/Users/s_hyunmong/Desktop/SnapFit/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1717586485905
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:21:25.908
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-05 20:21:25.951
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 2700
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-06-05 20:21:26.330
+!MESSAGE org.springframework.ide.vscode.commons.protocol.spring.SpringModelLanguageServer cannot be found by org.springframework.tooling.boot.ls_1.47.0.202306150731
+!STACK 0
+java.lang.ClassNotFoundException: org.springframework.ide.vscode.commons.protocol.spring.SpringModelLanguageServer cannot be found by org.springframework.tooling.boot.ls_1.47.0.202306150731
+	at org.eclipse.osgi.internal.loader.BundleLoader.generateException(BundleLoader.java:541)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:536)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:622)
+	at org.eclipse.lsp4e.LanguageServersRegistry$ExtensionLanguageServerDefinition.getServerInterface(LanguageServersRegistry.java:196)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$1(LanguageServerWrapper.java:291)
+	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-06-05 20:21:28.553
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\s_hyunmong'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:21:28.807
+!MESSAGE Boot project ADDED: SnapFit
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:21:28.809
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:21:28.811
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:21:35.992
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:21:38.497
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:24:26.319
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:24:34.373
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:24:34.375
+!MESSAGE Boot project ADDED: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:24:34.669
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:24:36.297
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:24:37.828
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:24:38.401
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:24:41.686
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 20:24:44.454
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.jface 2 0 2024-06-05 20:24:45.138
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-05 20:24:45.138
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.text.delete.line"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.match_pair_outward,Match Pair Outward,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		WorkbenchHandlerServiceHandler("io.emmet.eclipse.commands.match_pair_outward"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2024-06-05 20:26:00.304
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-05 20:26:00.304
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-05 20:26:00.304
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.addBlockCommentCommand,Add Block Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.addBlockCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.toggle_comment,Toggle Comment,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		WorkbenchHandlerServiceHandler("io.emmet.eclipse.commands.toggle_comment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-06-05 20:26:06.378
+!MESSAGE Could not detect hyperlinks due to timeout after 800 miliseconds
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.declaration.OpenDeclarationHyperlinkDetector.detectHyperlinks(OpenDeclarationHyperlinkDetector.java:68)
+	at org.eclipse.ui.texteditor.HyperlinkDetectorRegistry$HyperlinkDetectorDelegate.detectHyperlinks(HyperlinkDetectorRegistry.java:81)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:289)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:262)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.mouseMove(HyperlinkManager.java:457)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:216)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4274)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4072)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3660)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 20:38:30.316
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 20:38:30.535
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 20:38:30.543
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 20:38:50.314
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 20:42:50.684
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-06-05 21:33:56.269
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:36:39.535
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:36:40.035
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:36:42.120
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:36:54.134
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:36:54.694
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:36:57.628
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:37:17.411
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:37:17.709
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:37:24.420
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:37:24.807
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:37:31.837
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:37:32.131
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:37:45.517
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:37:45.780
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:42:44.403
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:42:44.682
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:43:00.655
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:43:01.075
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:43:26.950
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:44:51.994
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:47:33.948
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:47:38.151
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:47:42.606
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:47:47.600
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:48:07.883
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:48:08.288
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:48:12.261
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:48:42.644
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:48:42.936
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:48:53.184
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:48:53.459
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:49:02.317
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:49:02.625
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:49:07.968
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:49:12.775
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:52:18.250
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-06-05 21:53:24.878
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:53:26.388
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:53:26.753
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:54:54.429
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:54:54.845
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:55:43.102
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:55:43.418
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:56:15.368
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:56:46.140
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:57:22.379
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:57:22.914
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:57:34.139
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:57:34.634
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 21:59:40.967
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 21:59:41.323
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:02:55.524
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:02:56.069
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:03:34.168
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:03:34.881
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:04:05.328
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:04:05.928
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:05:46.982
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:10:37.251
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:11:00.339
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:11:00.869
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:11:05.083
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:11:31.931
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:11:32.532
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:11:38.070
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:11:38.632
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:13:16.302
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:13:41.088
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:13:49.940
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:19:40.707
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:19:42.127
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:28:29.188
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:28:29.509
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:28:29.979
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:28:29.984
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:30:12.285
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:30:12.514
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:30:12.883
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:30:12.887
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-06-05 22:30:39.637
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:31:00.035
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:31:00.287
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:31:00.656
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:31:00.660
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:31:03.659
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-06-05 22:32:58.628
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-06-05 22:34:31.618
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:36:17.679
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:36:17.920
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:36:18.306
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:36:18.310
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.eclipse.egit.core 4 0 2024-06-05 22:37:03.117
+!MESSAGE An exception occurred during push on URI https://github.com/JOON-KR/ssafyMall.git: https://github.com/JOON-KR/ssafyMall.git: connection failed
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/JOON-KR/ssafyMall.git: connection failed
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:740)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:638)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1537)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.NoRouteToHostException: No route to host: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:368)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.eclipse.jgit.transport.http.apache.HttpClientConnection.execute(HttpClientConnection.java:274)
+	at org.eclipse.jgit.transport.http.apache.HttpClientConnection.getResponseCode(HttpClientConnection.java:251)
+	at org.eclipse.jgit.util.HttpSupport.response(HttpSupport.java:232)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:665)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-06-05 22:37:03.121
+!MESSAGE Can't connect to any repository: https://github.com/JOON-KR/ssafyMall.git (https://github.com/JOON-KR/ssafyMall.git: connection failed)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-06-05 22:37:04.109
+!MESSAGE An exception occurred during push on URI https://github.com/JOON-KR/ssafyMall.git: https://github.com/JOON-KR/ssafyMall.git: connection failed
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/JOON-KR/ssafyMall.git: connection failed
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:740)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:638)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1537)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:368)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.eclipse.jgit.transport.http.apache.HttpClientConnection.execute(HttpClientConnection.java:274)
+	at org.eclipse.jgit.transport.http.apache.HttpClientConnection.getResponseCode(HttpClientConnection.java:251)
+	at org.eclipse.jgit.util.HttpSupport.response(HttpSupport.java:232)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:665)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-06-05 22:37:04.111
+!MESSAGE Can't connect to any repository: https://github.com/JOON-KR/ssafyMall.git (https://github.com/JOON-KR/ssafyMall.git: connection failed)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-06-05 22:37:20.886
+!MESSAGE An exception occurred during push on URI https://github.com/JOON-KR/ssafyMall.git: https://github.com/JOON-KR/ssafyMall.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/JOON-KR/ssafyMall.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:696)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:638)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1537)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-06-05 22:37:20.887
+!MESSAGE Can't connect to any repository: https://github.com/JOON-KR/ssafyMall.git (https://github.com/JOON-KR/ssafyMall.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-06-05 22:39:38.347
+!MESSAGE An exception occurred during push on URI https://github.com/JOON-KR/ssafyMall.git: https://github.com/JOON-KR/ssafyMall.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/JOON-KR/ssafyMall.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:696)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:638)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1537)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-06-05 22:39:38.350
+!MESSAGE Can't connect to any repository: https://github.com/JOON-KR/ssafyMall.git (https://github.com/JOON-KR/ssafyMall.git: not authorized)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:43:27.683
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:43:28.183
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:43:28.616
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:43:28.621
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:48:07.970
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:48:08.231
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:48:08.564
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:48:08.568
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:50:46.085
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:50:46.469
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:50:46.927
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:50:46.932
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:50:52.290
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:50:54.162
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:50:54.486
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:50:54.491
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:56:14.407
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-05 22:57:15.762
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:57:16.142
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:57:16.487
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 22:57:16.491
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 23:04:01.214
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 23:04:01.601
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-06-05 23:04:01.607
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-06-05 23:04:02.101
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.checkMarkerResoultion(LSPCodeActionMarkerResolution.java:154)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.hasResolutions(LSPCodeActionMarkerResolution.java:208)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:264)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:234)
+	at org.eclipse.ui.views.markers.MarkerField.annotateImage(MarkerField.java:87)
+	at org.eclipse.ui.internal.views.markers.MarkerProblemSeverityAndMessageField.update(MarkerProblemSeverityAndMessageField.java:80)
+	at org.eclipse.ui.internal.views.markers.MarkerColumnLabelProvider.update(MarkerColumnLabelProvider.java:57)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:970)
+	at org.eclipse.ui.internal.views.markers.MarkersTreeViewer.doUpdateItem(MarkersTreeViewer.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:126)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1048)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2107)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2786)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1977)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1482)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1482)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:538)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1443)
+	at org.eclipse.ui.internal.views.markers.UIUpdateJob.runInUIThread(UIUpdateJob.java:103)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:148)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4047)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:282)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-06-05 23:04:02.111
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.checkMarkerResoultion(LSPCodeActionMarkerResolution.java:154)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.hasResolutions(LSPCodeActionMarkerResolution.java:208)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:264)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:234)
+	at org.eclipse.ui.views.markers.MarkerField.annotateImage(MarkerField.java:87)
+	at org.eclipse.ui.internal.views.markers.MarkerProblemSeverityAndMessageField.update(MarkerProblemSeverityAndMessageField.java:80)
+	at org.eclipse.ui.internal.views.markers.MarkerColumnLabelProvider.update(MarkerColumnLabelProvider.java:57)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:970)
+	at org.eclipse.ui.internal.views.markers.MarkersTreeViewer.doUpdateItem(MarkersTreeViewer.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:126)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1048)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2107)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createTreeItem(AbstractTreeViewer.java:864)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2813)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1977)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1482)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1482)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:538)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1443)
+	at org.eclipse.ui.internal.views.markers.UIUpdateJob.runInUIThread(UIUpdateJob.java:103)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:148)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4047)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:282)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-06-05 23:04:02.120
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.checkMarkerResoultion(LSPCodeActionMarkerResolution.java:154)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.hasResolutions(LSPCodeActionMarkerResolution.java:208)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:264)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:234)
+	at org.eclipse.ui.views.markers.MarkerField.annotateImage(MarkerField.java:87)
+	at org.eclipse.ui.internal.views.markers.MarkerProblemSeverityAndMessageField.update(MarkerProblemSeverityAndMessageField.java:80)
+	at org.eclipse.ui.internal.views.markers.MarkerColumnLabelProvider.update(MarkerColumnLabelProvider.java:57)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:970)
+	at org.eclipse.ui.internal.views.markers.MarkersTreeViewer.doUpdateItem(MarkersTreeViewer.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:126)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1048)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2107)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createTreeItem(AbstractTreeViewer.java:864)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2813)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1977)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1482)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1482)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:538)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1443)
+	at org.eclipse.ui.internal.views.markers.UIUpdateJob.runInUIThread(UIUpdateJob.java:103)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:148)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4047)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:282)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-06-05 23:04:03.490
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.checkMarkerResoultion(LSPCodeActionMarkerResolution.java:154)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.hasResolutions(LSPCodeActionMarkerResolution.java:208)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:264)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:234)
+	at org.eclipse.ui.views.markers.MarkerField.annotateImage(MarkerField.java:87)
+	at org.eclipse.ui.internal.views.markers.MarkerProblemSeverityAndMessageField.update(MarkerProblemSeverityAndMessageField.java:80)
+	at org.eclipse.ui.internal.views.markers.MarkerColumnLabelProvider.update(MarkerColumnLabelProvider.java:57)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:144)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:970)
+	at org.eclipse.ui.internal.views.markers.MarkersTreeViewer.doUpdateItem(MarkersTreeViewer.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:126)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1048)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:427)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2107)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2786)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1971)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1977)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:684)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1947)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1904)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1482)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1398)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:365)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1359)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1482)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:538)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1443)
+	at org.eclipse.ui.internal.views.markers.UIUpdateJob.runInUIThread(UIUpdateJob.java:103)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:148)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4047)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: <semantic> TypeScript Server Error (5.0.4)
+No Project.
+Error: No Project.
+    at Object.ThrowNoProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:170274:11)
+    at _ProjectService.doEnsureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174146:189)
+    at _ProjectService.ensureDefaultProjectForFile (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:174141:75)
+    at IpcIOSession.getFileAndProjectWorker (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179058:77)
+    at IpcIOSession.getFileAndProject (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179044:17)
+    at IpcIOSession.getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179678:36)
+    at getCodeFixes (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:177828:43)
+    at C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:69
+    at IpcIOSession.executeWithRequestId (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179977:14)
+    at IpcIOSession.executeCommand (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:179985:29)
+    at IpcIOSession.onMessage (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:180027:51)
+    at process.<anonymous> (C:\sts-4.19.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.0.7.202305232103\node_modules\typescript\lib\tsserver.js:181594:14)
+    at process.emit (node:events:513:28)
+    at emit (node:internal/child_process:937:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:282)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+!SESSION 2024-06-09 22:18:34.550 -----------------------------------------------
+eclipse.buildId=4.19.0.202306150758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-06-09 22:18:37.919
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-06-09 22:18:56.516
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2024-06-09 22:19:21.326
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-09 22:19:21.326
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-09 22:19:25.944
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\sts-4.19.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin\javaw.exe
+-cp
+C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\classes;C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Dlsp.completions.indentation.enable=true
+-Xmx1024m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/Users/s_hyunmong/Desktop/SnapFit/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1717939165943
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:19:25.945
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-09 22:19:25.980
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 912
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-06-09 22:19:26.437
+!MESSAGE org.springframework.ide.vscode.commons.protocol.spring.SpringModelLanguageServer cannot be found by org.springframework.tooling.boot.ls_1.47.0.202306150731
+!STACK 0
+java.lang.ClassNotFoundException: org.springframework.ide.vscode.commons.protocol.spring.SpringModelLanguageServer cannot be found by org.springframework.tooling.boot.ls_1.47.0.202306150731
+	at org.eclipse.osgi.internal.loader.BundleLoader.generateException(BundleLoader.java:541)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:536)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:622)
+	at org.eclipse.lsp4e.LanguageServersRegistry$ExtensionLanguageServerDefinition.getServerInterface(LanguageServersRegistry.java:196)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$1(LanguageServerWrapper.java:291)
+	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-06-09 22:19:27.345
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\s_hyunmong'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:19:30.547
+!MESSAGE Boot project ADDED: SnapFit
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:19:30.549
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:19:30.552
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:19:30.554
+!MESSAGE Boot project ADDED: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:19:38.136
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:19:41.222
+!MESSAGE Classpath changed for project: SnapFit
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:19:58.343
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:20:01.226
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:20:15.693
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:20:16.112
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:20:20.509
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:20:22.173
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:20:25.726
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.jface 2 0 2024-06-09 22:20:34.591
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-09 22:20:34.591
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.text.delete.line"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.match_pair_outward,Match Pair Outward,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		WorkbenchHandlerServiceHandler("io.emmet.eclipse.commands.match_pair_outward"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:20:44.152
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:20:47.758
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:21:00.654
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-06-09 22:21:17.623
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:21:40.023
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-06-09 22:21:40.045
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:29:17.351
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:32:11.729
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:32:33.278
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:35:29.189
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:36:55.605
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:36:56.805
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:38:11.200
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:38:41.384
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:38:48.740
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:38:55.786
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:39:04.072
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:39:14.074
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:39:47.324
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:41:04.031
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:43:12.998
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:43:16.182
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-09 22:43:27.922
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-10 10:12:44.435
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-10 10:22:10.432
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-10 10:22:46.592
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-06-10 10:37:12.354
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.eclipse.ui 4 0 2024-06-11 12:59:34.674
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.springsource.ide.eclipse.commons.ui.launch.LaunchList.getLast()" because "this.launches" is null
+	at org.springsource.ide.eclipse.commons.ui.launch.AbstractLaunchToolbarPulldown.update(AbstractLaunchToolbarPulldown.java:112)
+	at org.springsource.ide.eclipse.commons.ui.launch.AbstractLaunchToolbarPulldown.access$4(AbstractLaunchToolbarPulldown.java:110)
+	at org.springsource.ide.eclipse.commons.ui.launch.AbstractLaunchToolbarPulldown$3.run(AbstractLaunchToolbarPulldown.java:134)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4047)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3663)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3738)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:324)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3265)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Shell.open(Shell.java:1311)
+	at org.eclipse.jface.window.Window.open(Window.java:795)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.open(ProgressMonitorDialog.java:633)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.aboutToRun(ProgressMonitorDialog.java:542)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:467)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:230)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.disconnectFromWorkspace(IDEWorkbenchAdvisor.java:560)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$2.run(IDEWorkbenchAdvisor.java:367)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.postShutdown(IDEWorkbenchAdvisor.java:388)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:2931)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1123)
+	at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:1391)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1391)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1367)
+	at org.eclipse.ui.internal.Workbench.lambda$16(Workbench.java:2733)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4274)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4266)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3271)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4844)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1478)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2306)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5040)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3655)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)

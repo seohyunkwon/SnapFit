@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("DOMContentLoaded event fired");
+
+            const searchButton = document.getElementById("search-button");
+            const keywordInput = document.getElementById("keyword-input");
+
+            if (searchButton && keywordInput) {
+                console.log("Search button and keyword input found");
+                searchButton.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const keyword = keywordInput.value;
+                    console.log("Search button clicked, keyword:", keyword);
+                    if (keyword) {
+                        fetchKeyword(keyword);
+                    } else {
+                        alert("키워드를 입력하세요.");
+                    }
+                });
+            } else {
+                console.log("Search button or keyword input not found");
+            }
+        });
+
+        const accessLicense = "0100000000d1dc8f2ece3db88133f9d4775a432cdb1beca7c9e857e3a44a2864a0de0dfc6a";
+        const secretKey = "AQAAAADR3I8uzj24gTP51HdaQyzbymNu5a239q9mNg9V4/MTwA==";
+        const customerId = "3213386";
+        const proxyURL = "https://cors-anywhere.herokuapp.com/";
+
+        async function fetchKeyword(keywords) {
+            console.log("Fetching keyword:", keywords);
+            const method = "GET";
+            const api_url = "/keywordstool";
+            const timestamp = Date.now().toString();
+
+            const signature = await createSignature(secretKey, timestamp, method, api_url);
+
+            try {
+                const response = await fetch(
+                    `${proxyURL}https://api.naver.com/keywordstool?hintKeywords=${encodeURIComponent(keywords)}&showDetail=1`,
+                    {
+                        headers: {
+                            "X-Timestamp": timestamp,
+                            "X-API-KEY": accessLicense,
+                            "X-CUSTOMER": customerId,
+                            "X-Signature": signature,
+                        },
+                    }
+                );
+
+                const data = await response.json();
+                console.log("API response:", data);
+                displayResults(data);
+            } catch (error) {
+                console.error("Error fetching keyword:", error);
+            }
+        }
+
+        async function createSignature(secretKey, timestamp, method, api_url) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(`${timestamp}.${method}.${api_url}`);
+
+            const key = await crypto.subtle.importKey("raw", encoder.encode(secretKey), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+
+            const signatureArrayBuffer = await crypto.subtle.sign("HMAC", key, data);
+
+            const signature = btoa(String.fromCharCode(...new Uint8Array(signatureArrayBuffer)));
+            return signature;
+        }
+
+        function displayResults(data) {
+            console.log("Displaying results:", data);
+            let maxResults = 10;
+            for (let i = 0; i < data.keywordList.length; i++) {
+                const keyword = data.keywordList[i];
+                console.log(keyword.relKeyword);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div th:fragment="header">
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/">Shop</a>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+                        <a class="nav-link" href="/admin/item/new">상품 등록</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+                        <a class="nav-link" href="/admin/items">상품 관리</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="isAuthenticated()">
+                        <a class="nav-link" href="/cart">장바구니</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="isAuthenticated()">
+                        <a class="nav-link" href="/orders">구매이력</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="isAnonymous()">
+                        <a class="nav-link" href="/members/login">로그인</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="isAuthenticated()">
+                        <a class="nav-link" href="/members/logout">로그아웃</a>
+                    </li>
+                </ul>
+                <input id="keyword-input" name="searchQuery" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" id="search-button">Search</button>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.snapfit.model.dao.CommentDao">
+
+    <!-- 1-1. 특정 영상에 대해 좋아요 또는 최신순으로 모든 댓글 조회하기(가져오기) -->
+    <select id="selectAllComments" parameterType="map"
+        resultType="Comment">
+
+        <choose>
+
+            <!-- orderBy가 `like`이면 좋아요 숫자를 기준으로 정렬 -->
+            <when test="sc.orderBy == 'like'">
+            
+                SELECT a.no AS no, a.video_no AS video_no, a.member_no AS member_no, a.content AS content, a.created_date AS created_date, a.`like` AS likeCount, b.nickname AS memberName
+                
+                FROM
+            
+                (SELECT Comment.no AS no,
+                video_no,
+                Comment.member_no AS member_no,
+                content,
+                created_date,
+                IFNULL(COUNT(Like_Comment.comment_no), 0) AS `like`
+                FROM Comment
+                LEFT JOIN Like_Comment ON Comment.no = Like_Comment.comment_no
+                WHERE Comment.video_no = ${videoNo}
+                GROUP BY Comment.no
+                HAVING Comment.video_no = ${videoNo}
+
+                <choose>
+
+                    <when test="sc.orderByDir == 'ASC'">
+                        ORDER BY `like` ASC
+                    </when>
+
+                    <otherwise>
+                        ORDER BY `like` DESC
+                    </otherwise>
+
+                </choose>) AS a, Member AS b
+                
+                WHERE a.member_no = b.no
+                
+                <choose>
+
+                    <when test="sc.orderByDir == 'ASC'">
+                        ORDER BY `like` ASC
+                    </when>
+
+                    <otherwise>
+                        ORDER BY `like` DESC
+                    </otherwise>
+
+                </choose>
+
+            </when>
+
+            <!-- orderBy가 created_date이면 생성일자를 기준으로 정렬 -->
+            <when test="sc.orderBy == 'created_date'">
+            
+                SELECT a.no AS no, a.video_no AS video_no, a.member_no AS member_no, a.content AS content, a.created_date AS created_date, a.`like` AS likeCount, b.nickname AS memberName
+                
+                FROM
+            
+                (SELECT Comment.no AS no,
+                video_no,
+                Comment.member_no AS member_no,
+                content,
+                created_date,
+                IFNULL(COUNT(Like_Comment.comment_no), 0) AS `like`
+                FROM Comment
+                LEFT JOIN Like_Comment ON Comment.no = Like_Comment.comment_no
+                WHERE Comment.video_no = ${videoNo}
+                GROUP BY Comment.no
+                HAVING Comment.video_no = ${videoNo}
+
+                <choose>
+
+                    <when test="sc.orderByDir == 'ASC'">
+                        ORDER BY created_date ASC
+                    </when>
+
+                    <otherwise>
+                        ORDER BY created_date DESC
+                    </otherwise>
+
+                </choose>) AS a, Member AS b
+                
+                WHERE a.member_no = b.no
+                
+                <choose>
+
+                    <when test="sc.orderByDir == 'ASC'">
+                        ORDER BY created_date ASC
+                    </when>
+
+                    <otherwise>
+                        ORDER BY created_date DESC
+                    </otherwise>
+
+                </choose>
+
+            </when>
+
+            <!-- 그 외의 모든 경우는 좋아요가 많은 순으로 정렬 -->
+            <otherwise>
+
+                SELECT Comment.no AS no, video_no, Comment.member_no AS member_no,
+                content, created_date, COUNT(*) AS `like`
+                FROM Comment, Like_Comment
+                WHERE Comment.no = Like_Comment.comment_no
+                GROUP BY Comment.no
+                HAVING
+                Comment.video_no = ${videoNo}
+                ORDER BY `like` DESC
+
+            </otherwise>
+
+        </choose>
+
+    </select>
+
+    <!-- 1-2. 특정 영상에 대해 하나의 댓글 등록하기(삽입하기) -->
+    <insert id="insertComment" parameterType="Comment">
+        INSERT INTO Comment
+        (video_no, member_no, content) VALUES
+        (#{videoNo}, #{memberNo},
+        #{content})
+    </insert>
+
+    <!-- 1-3. 특정 영상에 대해 하나의 댓글 수정하기 -->
+    <update id="updateComment" parameterType="Comment">
+        UPDATE Comment
+        SET
+        content = #{content}
+        WHERE no = #{no}
+    </update>
+
+    <!-- 1-4. 특정 영상에 대해 하나의 댓글 PK로 삭제하기 -->
+    <delete id="deleteComment" parameterType="long">
+        DELETE FROM Comment
+        WHERE no = #{commentNo}
+    </delete>
+
+    <!-- 2. 특정 유저가 작성한 모든 댓글들을 최신순으로 조회하기(가져오기) -->
+    <select id="selectAllCommentsWrittenByMember"
+        parameterType="long" resultType="Comment">
+        SELECT *
+        FROM Comment
+        WHERE member_no =
+        #{memberNo}
+        ORDER BY created_date DESC
+    </select>
+
+</mapper>

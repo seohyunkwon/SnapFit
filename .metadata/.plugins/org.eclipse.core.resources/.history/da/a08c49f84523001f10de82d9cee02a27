@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+body {
+    background-color: #f8f9fa;
+    color: black;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.2em;
+    margin-right: 15px;
+}
+.form-control {
+    width: 200px; /* 검색창의 너비를 조정 */
+    margin-right: 10px; /* 검색창과 버튼 사이의 여백을 조정 */
+}
+#search-button {
+    background-color: #6c757d; /* 검색 버튼 배경색 변경 */
+    color: white;
+}
+#search-button:hover {
+    background-color: #343a40; /* 마우스 호버 시 검색 버튼 배경색 변경 */
+}
