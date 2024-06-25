@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 <template>
   <div id="app" class="app">
     <TheHeader v-if="$route.meta.header === 1" />
     <RouterView></RouterView>
     <TheFooter v-if="$route.meta.header === 1" />
+=======
+
+<template>
+  <div id="app" class="app">
+    <TheHeader v-if="$route.meta.header === 1"/>
+    <RouterView></RouterView>
+    <TheFooter v-if="$route.meta.header === 1"/>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
   </div>
 </template>
 

@@ -1,7 +1,10 @@
 package com.ssafy.snapfit.model.dao;
 
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 import com.ssafy.snapfit.model.dto.Member;
 import com.ssafy.snapfit.model.dto.SearchCondition;
 
@@ -18,7 +21,10 @@ public interface MemberDao {
 	
 	// 회원 삭제
 	int deleteMember(long no);
+<<<<<<< HEAD
 	
 	// 상위 3개 관심 운동이 같은 회원 찾기
 	List<Member> selectMemberByExercise(long memberNo);
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }

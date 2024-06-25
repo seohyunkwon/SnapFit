@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="d-flex justify-content-end mb-3">
     <select @change="handleVideoSelection" v-show="loginNo == member.no">
       <option value="myVideos">나의 영상</option>
@@ -93,10 +94,25 @@ const closeModal = () => {
   showCommentModal.value = false;
 };
 
+=======
+    <div class="video-list row row-cols-2">
+        <VideoDetail class="col"/>
+        <VideoDetail class="col"/>
+        <VideoDetail class="col"/>
+        <VideoDetail class="col"/>
+        <VideoDetail class="col"/>
+        <VideoDetail class="col"/>
+    </div>
+</template>
+
+<script setup>
+import VideoDetail from '@/components/video/VideoDetail.vue';
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 </script>
 
 <style scoped>
 .video-list {
+<<<<<<< HEAD
   width: 100%;
   max-height: calc(100vh - 150px);
 }
@@ -137,3 +153,22 @@ select {
   border: none;
 }
 </style>
+=======
+    width: 100%;
+    height: 464px;
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+}
+.video-list::-webkit-scrollbar {
+    width: 0px;
+}
+
+.video-list::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.video-list::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+</style>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9

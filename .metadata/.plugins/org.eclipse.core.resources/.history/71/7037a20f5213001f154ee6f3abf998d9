@@ -1,0 +1,5 @@
+package com.ssafy.snapfit.service;
+
+public interface UserService {
+
+}

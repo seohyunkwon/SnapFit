@@ -17,6 +17,7 @@ public class WebConfig implements WebMvcConfigurer {
 		registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
 	}
 
+<<<<<<< HEAD
 	@Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
@@ -25,6 +26,13 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedHeaders("*")
                 .allowCredentials(true);
     }
+=======
+	// CORS 에러 전역 처리 
+	@Override
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/**").allowedOrigins("*").allowedMethods("POST", "GET", "PUT", "DELETE");
+	}
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	
 //	// 인터셉터 등 처리 가능
 //	@Autowired

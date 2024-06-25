@@ -89,6 +89,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+<<<<<<< HEAD
 			<plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-compiler-plugin</artifactId>
@@ -99,6 +100,8 @@
 			    </configuration>
 			</plugin>
 
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 		</plugins>
 	</build>
 

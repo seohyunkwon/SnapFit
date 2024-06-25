@@ -6,6 +6,7 @@ import com.ssafy.snapfit.model.dto.Follow;
 import com.ssafy.snapfit.model.dto.Member;
 
 public interface FollowService {
+<<<<<<< HEAD
 	
 	// 1. 특정 유저"가" 팔로우하는 모든 사람들을 조회하기(가져오기) 즉, 특정 유저의 팔로잉 리스트 조회하기(가져오기)
 	List<Member> findAllFollowingMembers(long memberNo);
@@ -22,4 +23,13 @@ public interface FollowService {
 	// 5. 팔로우라는 "관계"를 삭제하기
 	boolean removeFollow(Follow follow);
 
+=======
+	List<Member> getFollowers(long no);
+	
+	List<Member> getFollowings(long no);
+	
+	boolean follow(Follow follow);
+	
+	boolean unFollow(Follow follow);
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }

@@ -3,6 +3,10 @@
 }
 
 .app {
+<<<<<<< HEAD
+=======
+    /* index */
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,6 +51,7 @@
     100% {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+<<<<<<< HEAD
 }
 
 #app::-webkit-scrollbar {
@@ -59,4 +64,6 @@
 
 #app::-webkit-scrollbar-track {
     background-color: transparent;
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }

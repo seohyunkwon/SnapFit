@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 drop database snapfit;
 
 create database snapfit;
 
 use snapfit;
 
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 CREATE TABLE Member(
   no BIGINT NOT NULL AUTO_INCREMENT,
   id VARCHAR(30) NOT NULL UNIQUE,
@@ -89,4 +92,8 @@ CREATE TABLE Notification(
   CONSTRAINT FK_Member_TO_Notification FOREIGN KEY (sender_no) REFERENCES Member (no) ON DELETE CASCADE,
   CONSTRAINT FK_Member_TO_Notification1 FOREIGN KEY (receiver_no) REFERENCES Member (no) ON DELETE CASCADE,
   CONSTRAINT FK_NotificationCode_TO_Notification FOREIGN KEY (notificationcode_no) REFERENCES NotificationCode (no) ON DELETE CASCADE
+<<<<<<< HEAD
 );
+=======
+);
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9

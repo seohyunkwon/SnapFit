@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=SnapFit/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ssafy.snapfit.service{MemberService.java[MemberService" modifiers="513" timestamp="1715849411333"/>
+    <typeInfo handle="=SnapFit/C:\/Users\/s_hyunmong\/.m2\/repository\/org\/springframework\/security\/spring-security-core\/6.2.4\/spring-security-core-6.2.4.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.security=/=/maven.artifactId=/spring-security-core=/=/maven.version=/6.2.4=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.security.core.userdetails(UserDetails.class[UserDetails" modifiers="1537" timestamp="1715826933944"/>
+    <typeInfo handle="=SnapFit/C:\/Users\/s_hyunmong\/.m2\/repository\/org\/springframework\/spring-web\/6.1.6\/spring-web-6.1.6.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-web=/=/maven.version=/6.1.6=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.web.filter(OncePerRequestFilter.class[OncePerRequestFilter" modifiers="1057" timestamp="1713489412192"/>
+</typeInfoHistroy>

@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="app d-flex flex-column">
         <!-- title div -->
         <div class="title">
@@ -11,19 +12,40 @@
             <div class="line" style="animation-delay: 1s;">
                 <p>나만의 코치와 함께 도전해보세요!</p>
             </div>
+=======
+    <div class="app">
+        <!-- title div -->
+        <div class="title">
+            <h1>WELCOME!</h1>
+            <p>
+                언제 어디서나 SSAFIT!<br />
+                나만의 코치와 함께 도전해보세요!
+            </p>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
         </div>
 
         <!-- 로그인 폼 div -->
         <div class="login-form">
+<<<<<<< HEAD
             <form @submit.prevent="doLogin">
                 <!-- 아이디 input -->
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="id" placeholder="아이디" v-model="id"/>
+=======
+            <form>
+                <!-- 아이디 input -->
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="id" placeholder="아이디" />
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
                     <label for="id">아이디</label>
                 </div>
                 <!-- 비밀번호 input -->
                 <div class="form-floating">
+<<<<<<< HEAD
                     <input type="password" class="form-control" id="password" placeholder="비밀번호" v-model="password"/>
+=======
+                    <input type="password" class="form-control" id="password" placeholder="비밀번호" />
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
                     <label for="password">비밀번호</label>
                 </div>
                 <!-- 비밀번호 찾기 div -->
@@ -41,6 +63,7 @@
     </div>
 </template>
 
+<<<<<<< HEAD
 
 <script setup>
 import { ref } from 'vue'
@@ -89,6 +112,17 @@ const doLogin = () => {
     display: inline-block;
     opacity: 0;
     animation: fadeInSlideIn 1s forwards;
+=======
+<script setup>
+</script>
+
+<style scoped>
+.title {
+    position: absolute;
+    top: 45%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }
 
 .title h1 {
@@ -101,10 +135,16 @@ const doLogin = () => {
     padding-left: 10px;
 }
 
+<<<<<<< HEAD
 /* 로그인 폼 스타일 */
 .login-form {
     position: absolute;
     top: 50%;
+=======
+.login-form {
+    position: absolute;
+    top: 60%;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
@@ -139,12 +179,19 @@ input {
 
 .signup a {
     position: absolute;
+<<<<<<< HEAD
     top: 72%;
+=======
+    top: 82%;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
     left: 50%;
     transform: translate(-50%, -50%);
     color: gray !important;
     font-size: 15px;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 </style>

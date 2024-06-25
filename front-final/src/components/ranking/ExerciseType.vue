@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="col type" :style="randomBackgroundColor" @click="showRanking(exercise)">
         <h4>
             <span class="emoji">{{ randomEmoji }}</span>
@@ -60,6 +61,14 @@ const randomEmoji = computed(() => {
 const randomBackgroundColor = computed(() => ({
   backgroundColor: getRandomBlueColor()
 }));
+=======
+    <div class="col type">
+
+    </div>
+</template>
+
+<script setup>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 
 </script>
 
@@ -69,6 +78,7 @@ const randomBackgroundColor = computed(() => ({
     margin: 5px;
     width: 45%;
     height: 100px;
+<<<<<<< HEAD
     background-color: rgb(199, 232, 252);
     border-radius: 30px;
 }
@@ -93,3 +103,9 @@ h4 {
     font-weight: bold;
 }
 </style>
+=======
+    background-color: black;
+    border-radius: 30px;
+}
+</style>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9

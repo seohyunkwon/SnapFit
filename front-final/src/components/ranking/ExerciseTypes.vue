@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="app">
         <div class="banners">
             <div class="title mb-3" :class="{ 'title-animate': titleVisible }">
@@ -20,10 +21,31 @@
             </div>
         </div>
     </div>
+=======
+        <div class="types row row-cols-2">
+            <ExerciseType></ExerciseType>
+            <ExerciseType></ExerciseType>   
+            <ExerciseType></ExerciseType>
+            <ExerciseType></ExerciseType>  
+            <ExerciseType></ExerciseType>
+            <ExerciseType></ExerciseType>   
+            <ExerciseType></ExerciseType>
+            <ExerciseType></ExerciseType>
+            <ExerciseType></ExerciseType>
+            <ExerciseType></ExerciseType>   
+            <ExerciseType></ExerciseType>
+            <ExerciseType></ExerciseType>
+            <ExerciseType></ExerciseType>
+            <ExerciseType></ExerciseType>   
+            <ExerciseType></ExerciseType>
+            <ExerciseType></ExerciseType>  
+        </div>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 </template>
 
 <script setup>
 import ExerciseType from '@/components/ranking/ExerciseType.vue'
+<<<<<<< HEAD
 import { ref, onMounted } from 'vue';
 import api from '@/api';
 
@@ -136,3 +158,15 @@ const showMoreExercises = () => {
     background-color: transparent;
 }
 </style>
+=======
+</script>
+
+<style scoped>
+.types{
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+</style>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9

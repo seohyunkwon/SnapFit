@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@videojs-player/vue": "^1.0.0",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
@@ -16,6 +17,13 @@
     "video.js": "^7.21.5",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0" 
+=======
+    "bootstrap": "^5.3.3",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "vue-video-player": "^6.0.0"
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

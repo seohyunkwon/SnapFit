@@ -1,0 +1,28 @@
+package com.ssafy.snapfit.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ssafy.snapfit.service.FollowService;
+import com.ssafy.snapfit.service.MemberService;
+
+@RestController
+public class MyPageController {
+	
+	@Autowired
+	private final MemberService memberService;
+	@Autowired
+	private final FollowService followService;
+	
+	public MyPageController(MemberService memberService, FollowService followService) {
+		this.memberService = memberService;
+		this.followService = followService;
+	}
+	
+	public ResponseEntity<?> getFollowing(@PathVariable long no) {
+		
+	}
+
+}

@@ -3,7 +3,10 @@ package com.ssafy.snapfit.model.dto;
 import java.util.Date;
 
 public class Member {
+<<<<<<< HEAD
 	private Grade grade; 
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	private long no;
 	private String id;
 	private String password;
@@ -14,9 +17,14 @@ public class Member {
 		
 	public Member() {}
 
+<<<<<<< HEAD
 	public Member(Grade grade, long no, String id, String password, String nickname, String profileImg, Date birthDate,
 			int gender) {
 		this.grade = grade;
+=======
+	public Member(long no, String id, String password, String nickname, String profileImg, Date birthDate,
+			int gender) {
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 		this.no = no;
 		this.id = id;
 		this.password = password;
@@ -35,6 +43,7 @@ public class Member {
 		this.gender = gender;
 	}
 
+<<<<<<< HEAD
 	public Grade getGrade() {
 		return grade;
 	}
@@ -43,6 +52,8 @@ public class Member {
 		this.grade = grade;
 	}
 
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	public long getNo() {
 		return no;
 	}
@@ -101,7 +112,11 @@ public class Member {
 
 	@Override
 	public String toString() {
+<<<<<<< HEAD
 		return "Member [grade=" + grade + ", no=" + no + ", id=" + id + ", password=" + password + ", nickname="
+=======
+		return "Member [ no=" + no + ", id=" + id + ", password=" + password + ", nickname="
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 				+ nickname + ", profileImg=" + profileImg + ", birth=" + birthDate + ", gender=" + gender + "]";
 	}
 }

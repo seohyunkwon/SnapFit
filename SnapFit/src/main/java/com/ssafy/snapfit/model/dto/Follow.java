@@ -3,7 +3,11 @@ package com.ssafy.snapfit.model.dto;
 public class Follow {
 	private long no;
 	private long followingNo;
+<<<<<<< HEAD
 	private String followingName;
+=======
+	private String follwingName;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	private long followerNo;
 	private String followerName;
 	
@@ -20,17 +24,29 @@ public class Follow {
 		super();
 		this.no = no;
 		this.followingNo = followingNo;
+<<<<<<< HEAD
 		this.followingName = follwingName;
+=======
+		this.follwingName = follwingName;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 		this.followerNo = followerNo;
 		this.followerName = followerName;
 	}
 
 	public String getFollwingName() {
+<<<<<<< HEAD
 		return followingName;
 	}
 
 	public void setFollwingName(String follwingName) {
 		this.followingName = follwingName;
+=======
+		return follwingName;
+	}
+
+	public void setFollwingName(String follwingName) {
+		this.follwingName = follwingName;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	}
 
 	public String getFollowerName() {
@@ -73,7 +89,11 @@ public class Follow {
 
 	@Override
 	public String toString() {
+<<<<<<< HEAD
 		return "Follow [no=" + no + ", followingNo=" + followingNo + ", follwingName=" + followingName + ", followerNo="
+=======
+		return "Follow [no=" + no + ", followingNo=" + followingNo + ", follwingName=" + follwingName + ", followerNo="
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 				+ followerNo + ", followerName=" + followerName + "]";
 	}	
 }

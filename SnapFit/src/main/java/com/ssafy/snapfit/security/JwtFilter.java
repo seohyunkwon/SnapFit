@@ -27,8 +27,11 @@ public class JwtFilter extends GenericFilter {
 
 	private String resolveToken(HttpServletRequest request) {
 		String bearerToken = request.getHeader("Authorization");
+<<<<<<< HEAD
 		System.out.println("bearerToken = " + bearerToken);
 		logger.info("token = {}", bearerToken);
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 		if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
 			return bearerToken.substring(7);
 		}
@@ -41,7 +44,11 @@ public class JwtFilter extends GenericFilter {
 		HttpServletRequest request = (HttpServletRequest) req;
 		String token = resolveToken(request);
 		String requestURI = request.getRequestURI();
+<<<<<<< HEAD
 
+=======
+		System.out.println("dofilter token = "+token);
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 		if (StringUtils.hasText(token) && jwtUtil.validateToken(token)) {
 			Authentication authentication = jwtUtil.autenticate(token);
 			SecurityContextHolder.getContext().setAuthentication(authentication);

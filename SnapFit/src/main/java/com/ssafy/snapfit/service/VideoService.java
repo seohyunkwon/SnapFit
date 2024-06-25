@@ -14,7 +14,11 @@ public interface VideoService {
 	List<Video> searchVideos(SearchCondition sc);
 	
 	// 1-3. 전체 영상 단위에서 하나의 영상 등록하기(삽입하기)
+<<<<<<< HEAD
 	int addVideo(Video video);
+=======
+	boolean addVideo(Video video);
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	
 	// 1-4. 전체 영상 단위에서 PK로 특정 영상 삭제하기 (수정 기능은 X)
 	boolean removeVideo(long videoNo);
@@ -22,6 +26,7 @@ public interface VideoService {
 	// 2. 특정 유저가 팔로잉하는 사람들의 모든 영상 조회하기(가져오기)
 	List<Video> findAllFollowingVideos(long memberNo);
 	
+<<<<<<< HEAD
 	// 3. 특정 유저가 좋아요 누른 영상들을 최신순으로 조회하기(가져오기)
 	List<Video> findAllLikeVideos(long memberNo);
 	
@@ -31,4 +36,6 @@ public interface VideoService {
 	// 5. 특정 영상의 모든 영상 가져오기
 	List<Video> findAllExerciseVideos(long exerciseNo);
 	
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }

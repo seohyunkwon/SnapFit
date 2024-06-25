@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="video-modal">
       <div class="modal-content">
         <div class="justify-content-between">
@@ -175,3 +176,15 @@ const showRanking = (exercise, index) => {
   }
   </style>
   
+=======
+    
+</template>
+
+<script setup>
+
+</script>
+
+<style scoped>
+
+</style>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9

@@ -14,6 +14,7 @@ public class Video {
 	private String title;
 	private String content;
 	private Date createdDate;
+<<<<<<< HEAD
 	private String profileImg;
 	
 	public String getProfileImg() {
@@ -24,6 +25,9 @@ public class Video {
 		this.profileImg = profileImg;
 	}
 
+=======
+	
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	public Video() {}
 
 	public Video(long no, long uploaderNo, String uploaderName, long exerciseNo, String exerciseName, String title,

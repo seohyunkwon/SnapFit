@@ -12,6 +12,7 @@ public class Comment {
 	private String content;
 	private Date createdDate;
 	
+<<<<<<< HEAD
 	public long getLikeCount() {
 		return likeCount;
 	}
@@ -25,6 +26,8 @@ public class Comment {
 	// 댓글 작성자의 프로필 이미지
 	private String profileImg;
 	
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	public Comment() {}
 
 	public Comment(long no, long videoNo, long memberNo, String content, Date createdDate) {
@@ -85,9 +88,18 @@ public class Comment {
 		this.memberNo = memberNo;
 	}
 
+<<<<<<< HEAD
 	
 	public void setLike(boolean isLike) {
 		this.isLike = isLike;
+=======
+	public long getLikeCount() {
+		return likeCount;
+	}
+
+	public void setLikeCount(long likeCount) {
+		this.likeCount = likeCount;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	}
 
 	public String getMemberName() {
@@ -114,6 +126,7 @@ public class Comment {
 		this.createdDate = createdDate;
 	}
 
+<<<<<<< HEAD
 	public boolean getIsLike() {
 		return isLike;
 	}
@@ -135,6 +148,12 @@ public class Comment {
 		return "Comment [no=" + no + ", videoNo=" + videoNo + ", memberNo=" + memberNo + ", likeCount=" + likeCount
 				+ ", memberName=" + memberName + ", content=" + content + ", createdDate=" + createdDate + ", isLike="
 				+ isLike + ", profileImg=" + profileImg + "]";
+=======
+	@Override
+	public String toString() {
+		return "Comment [no=" + no + ", videoNo=" + videoNo + ", memberNo=" + memberNo + ", likeCount=" + likeCount
+				+ ", memberName=" + memberName + ", content=" + content + ", createdDate=" + createdDate + "]";
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	}
 
 }

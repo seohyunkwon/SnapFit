@@ -7,17 +7,22 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 import com.ssafy.snapfit.model.dao.CommentDao;
+<<<<<<< HEAD
 import com.ssafy.snapfit.model.dao.LikeDao;
 import com.ssafy.snapfit.model.dao.MemberDao;
 import com.ssafy.snapfit.model.dto.Comment;
 import com.ssafy.snapfit.model.dto.LikeComment;
 import com.ssafy.snapfit.model.dto.Member;
+=======
+import com.ssafy.snapfit.model.dto.Comment;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 import com.ssafy.snapfit.model.dto.SearchCondition;
 
 @Service
 public class CommentServiceImpl implements CommentService {
 
 	private final CommentDao commentDao;
+<<<<<<< HEAD
 	private final MemberDao memberDao;
 	private final LikeDao likeDao;
 
@@ -25,16 +30,26 @@ public class CommentServiceImpl implements CommentService {
 		this.commentDao = commentDao;
 		this.memberDao = memberDao;
 		this.likeDao = likeDao;
+=======
+	
+	public CommentServiceImpl(CommentDao commentDao) {
+		this.commentDao = commentDao;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	}
 
 	// 1-1. 특정 영상에 대해 좋아요 또는 최신순으로 모든 댓글 조회하기(가져오기)
 	@Override
+<<<<<<< HEAD
 	public List<Comment> findAllComments(long videoNo, SearchCondition sc, long loginNo) {
+=======
+	public List<Comment> findAllComments(long videoNo, SearchCondition sc) {
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 		
 		Map<String, Object> map = new HashMap<>();
 		map.put("videoNo", videoNo);
 		map.put("sc", sc);
 		
+<<<<<<< HEAD
 		List<Comment> list = commentDao.selectAllComments(map);
 		
 		for(Comment comment : list) {
@@ -96,6 +111,10 @@ public class CommentServiceImpl implements CommentService {
 	@Override
 	public List<Comment> findAllCommentsWrittenByMember(long memberNo) {
 		return commentDao.selectAllCommentsWrittenByMember(memberNo);
+=======
+		return commentDao.selectAllComments(map);
+		
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	}
 	
 }

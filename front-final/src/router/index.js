@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Kakao from '@/components/member/Kakao.vue'
 import UpdateForm from '@/components/member/UpdateForm.vue'
 import VideoList from '@/components/member/VideoList.vue'
@@ -6,6 +7,13 @@ import MemberView from '@/views/MemberView.vue'
 import RankingView from '@/views/RankingView.vue'
 import SignupView from '@/views/SignupView.vue'
 import UploadVideoView from '@/views/UploadVideoView.vue'
+=======
+import VideoList from '@/components/member/VideoList.vue'
+import LoginView from '@/views/LoginView.vue'
+import MyPageView from '@/views/MyPageView.vue'
+import RankingView from '@/views/RankingView.vue'
+import SignupView from '@/views/SignupView.vue'
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 import VideoView from '@/views/VideoView.vue'
 import WelcomeView from '@/views/WelcomeView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
@@ -18,8 +26,12 @@ const router = createRouter({
       name: 'welcome',
       component: WelcomeView,
       meta :  {
+<<<<<<< HEAD
         header: 0,
         requiresAuth: false
+=======
+        header: 0
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
       }
     },
     {
@@ -27,8 +39,12 @@ const router = createRouter({
       name: 'login',
       component: LoginView,
       meta : {
+<<<<<<< HEAD
         header: 0,
         requiresAuth: false
+=======
+        header: 0
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
       }
     },
     {
@@ -36,8 +52,12 @@ const router = createRouter({
       name: 'signup',
       component: SignupView,
       meta : {
+<<<<<<< HEAD
         header: 0,
         requiresAuth: false
+=======
+        header: 0
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
       }
     },
     {
@@ -45,6 +65,7 @@ const router = createRouter({
       name: 'video',
       component: VideoView,
       meta : {
+<<<<<<< HEAD
         header: 1,
         requiresAuth: true
       }
@@ -56,10 +77,22 @@ const router = createRouter({
       meta : {
         header: 1,
         requiresAuth: true
+=======
+        header: 1
+      }
+    },
+    {
+      path: '/mypage',
+      name: 'mypage',
+      component: MyPageView,
+      meta : {
+        header: 1
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
       },
       children: [
         {
           path: "",
+<<<<<<< HEAD
           name: "",
           component: VideoList
         },
@@ -67,6 +100,10 @@ const router = createRouter({
           path: 'update',
           name: 'update',
           component: UpdateForm
+=======
+          name: "videoList",
+          component: VideoList
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
         }
       ]
     },
@@ -75,6 +112,7 @@ const router = createRouter({
       name: 'ranking',
       component: RankingView,
       meta : {
+<<<<<<< HEAD
         header: 1,
         requiresAuth: true
       }
@@ -91,11 +129,16 @@ const router = createRouter({
       path: '/kakao/oauth',
       name: 'kakao',
       component: Kakao
+=======
+        header: 1
+      }
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
     }
     
   ]
 })
 
+<<<<<<< HEAD
 router.beforeEach((to, from, next) => {
   const isAuthenticated = sessionStorage.getItem('token') != null;
 
@@ -111,4 +154,6 @@ router.beforeEach((to, from, next) => {
 });
 
 
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 export default router

@@ -1,7 +1,10 @@
 package com.ssafy.snapfit.service;
 
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -48,11 +51,14 @@ public class MemberServiceImpl implements MemberService {
 		int result = memberDao.deleteMember(no);
 		return result == 1;
 	}
+<<<<<<< HEAD
 
 	@Override
 	public List<Member> findRecommendMember(long memberNo) {
 		return memberDao.selectMemberByExercise(memberNo);
 	}
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	
 	
 

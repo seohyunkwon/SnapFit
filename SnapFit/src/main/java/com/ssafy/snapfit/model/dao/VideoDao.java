@@ -22,6 +22,7 @@ public interface VideoDao {
 	// 2. 특정 유저가 팔로잉하는 사람들의 모든 영상 조회하기(가져오기)
 	List<Video> selectAllFollowingVideos(long memberNo);
 	
+<<<<<<< HEAD
 	// 3. 특정 유저가 좋아요 누른 영상들을 최신순으로 조회하기(가져오기)
 	List<Video> selectAllLikeVideos(long memberNo);
 	
@@ -31,4 +32,6 @@ public interface VideoDao {
 	// 5. 특정 영상의 모든 영상 가져오기
 	List<Video> selectAllExerciseVideo(long exerciseNo);
 	
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }

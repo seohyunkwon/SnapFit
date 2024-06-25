@@ -2,16 +2,25 @@
     <div class="app">
         <!-- title div -->
         <div class="title">
+<<<<<<< HEAD
             <div class="line" style="animation-delay: 0s;">
                 <h1>WELCOME!</h1>
             </div>
             <div class="line" style="animation-delay: 0.5s;">
                 <p>언제 어디서나 SNAPFIT!<br>나만의 코치와 함께 도전해보세요!</p>
             </div>
+=======
+            <h1>WELCOME!</h1>
+            <p>
+                언제 어디서나 SSAFIT!<br>
+                나만의 코치와 함께 도전해보세요!
+            </p>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
         </div>
 
         <!-- 회원가입 폼 div -->
         <div class="signup-form">
+<<<<<<< HEAD
             <form @submit.prevent="doSignup">
                 <!-- 아이디 input  -->
                 <div class="form-floating mb-3">
@@ -26,10 +35,22 @@
                 <!-- 비밀번호 input  -->
                 <div class="form-floating mb-3">
                     <input v-model="password" type="password" class="form-control" id="password" placeholder="비밀번호" required>
+=======
+            <form>
+                <!-- 아이디 input  -->
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="id" placeholder="아이디">
+                    <label for="id">아이디</label>
+                </div>
+                <!-- 비밀번호 input  -->
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="password" placeholder="비밀번호">
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
                     <label for="password">비밀번호</label>
                 </div>
                 <!-- 비밀번호 확인 input  -->
                 <div class="form-floating mb-3">
+<<<<<<< HEAD
                     <input v-model="passwordCheck" type="password" class="form-control" id="passwordCheck" placeholder="비밀번호" required>
                     <label for="passwordCheck">비밀번호 확인</label>
                     <span v-if="isValidPassword != null && isValidPassword" class="valid">비밀번호가 일치합니다.</span>
@@ -50,27 +71,55 @@
                 <!-- 생년월일 input  -->
                 <div class="form-floating mb-3">
                     <input v-model="birthDate" type="date" class="form-control" id="birth" placeholder="생년월일" required>
+=======
+                    <input type="password" class="form-control" id="passwordCheck" placeholder="비밀번호">
+                    <label for="passwordCheck">비밀번호 확인</label>
+                </div>
+                <!-- 닉네임 input  -->
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nickname" placeholder="닉네임">
+                    <label for="nickname">닉네임</label>
+                </div>
+                <!-- 생년월일 input  -->
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="birth" placeholder="생년월일">
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
                     <label for="birth">생년월일</label>
                 </div>
                 <!-- 성별 input  -->
                 <div class="form-floating mb-3 gender">
                     <div class="form-check form-check-inline">
+<<<<<<< HEAD
                         <input v-model="gender" class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="0" required>
                         <label class="form-check-label" for="inlineRadio1">여성</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input v-model="gender" class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="1" required>
+=======
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1">
+                        <label class="form-check-label" for="inlineRadio1">여성</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
                         <label class="form-check-label" for="inlineRadio2">남성</label>
                     </div>
                 </div>
                 <!-- 제출 버튼 -->
+<<<<<<< HEAD
                 <button type="submit" class="btn btn-signup">회원가입</button>
+=======
+                <input type="submit" class="btn btn-signup" value="회원가입">
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
             </form>
         </div>
     </div>
 </template>
 
 <script setup>
+<<<<<<< HEAD
 import { ref, watch } from 'vue'
 import { useMemberStore } from '@/stores/member';
 import axios, { HttpStatusCode } from 'axios';
@@ -233,11 +282,17 @@ const recommend = function(key, value) {
     }
 }
 
+=======
+</script>
+
+<style scoped>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 .title {
     position: absolute;
     top: 25%;
     left: 43%;
     transform: translate(-50%, -50%);
+<<<<<<< HEAD
     text-align: center;
 }
 
@@ -245,6 +300,8 @@ const recommend = function(key, value) {
     display: inline-block;
     opacity: 0;
     animation: fadeInSlideIn 1s forwards;
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }
 
 .title h1 {
@@ -259,10 +316,18 @@ const recommend = function(key, value) {
 
 .signup-form {
     position: absolute;
+<<<<<<< HEAD
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
+=======
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }
 
 .btn-signup {
@@ -293,6 +358,7 @@ input {
     display: inline-block;
     margin-right: 10px;
 }
+<<<<<<< HEAD
 
 .error {
     color: red;
@@ -317,4 +383,6 @@ input {
     background-color: rgb(96, 122, 146);
 }
 
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 </style>

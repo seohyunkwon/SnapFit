@@ -2,6 +2,7 @@
     <footer>
         <nav class="navbar fixed-bottom bg-white">
             <div class="container-fluid d-flex justify-content-evenly">
+<<<<<<< HEAD
                 <RouterLink :to="{ path:'/video', query: { type: 'follow'} }" :search-condition="searchCondition" class="icon-link">
                     <div class="icon-wrapper">
                         <img src="@/assets/icon/heart.png" class="logos">
@@ -26,11 +27,18 @@
                         <span class="tooltip-text">Mypage</span>
                     </div>
                 </RouterLink>
+=======
+                <img src="@/assets/icon/heart.png" class="logos">
+                <RouterLink to="/video"><img src="@/assets/icon/video.png" class="logos"></RouterLink>
+                <RouterLink to="/ranking"><img src="@/assets/icon/ranking.png" class="logos"></RouterLink>
+                <RouterLink to="/mypage"><img src="@/assets/icon/profile.png" class="logos"></RouterLink>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
             </div>
         </nav>
     </footer>
 </template>
 
+<<<<<<< HEAD
 
 
 <script setup>
@@ -40,6 +48,10 @@ const memberLink = computed(() => {
     const no = sessionStorage.getItem('no')
     return no ? `/member/${no}` : '/login' 
 })
+=======
+<script setup>
+
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 </script>
 
 <style scoped>
@@ -56,6 +68,7 @@ const memberLink = computed(() => {
 .logos {
     width: 40px;
     margin-right: 10px;
+<<<<<<< HEAD
     transition: transform 0.5s;
 }
 
@@ -99,3 +112,7 @@ const memberLink = computed(() => {
 }
 </style>
 
+=======
+}
+</style>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9

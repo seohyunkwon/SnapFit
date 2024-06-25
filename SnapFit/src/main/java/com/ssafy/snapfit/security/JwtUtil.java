@@ -13,9 +13,13 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
+<<<<<<< HEAD
 import com.ssafy.snapfit.model.dao.MemberDao;
 import com.ssafy.snapfit.model.dto.Member;
 import com.ssafy.snapfit.model.dto.SearchCondition;
+=======
+import com.ssafy.snapfit.model.dto.Member;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -26,6 +30,7 @@ import io.jsonwebtoken.security.Keys;
 
 @Component
 public class JwtUtil {
+<<<<<<< HEAD
 	private final MemberDao memberDao;
 	
     public JwtUtil(MemberDao memberDao) {
@@ -33,12 +38,16 @@ public class JwtUtil {
 	}
 
 	private String key = "SnapFit_Secret_key_String_key_key";
+=======
+    private String key = "SnapFit_Secret_key_String_key_key";
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
     private SecretKey secretKey = Keys.hmacShaKeyFor(key.getBytes(StandardCharsets.UTF_8));
 
     public static final Logger logger = LoggerFactory.getLogger(JwtUtil.class);
 
     public String createToken(Member member) {
 
+<<<<<<< HEAD
         Date exp = new Date(System.currentTimeMillis() + 1000 * 60 * 60);
        
         member = memberDao.selectMember(new SearchCondition("id", member.getId(), null, null));
@@ -47,6 +56,13 @@ public class JwtUtil {
                 .setSubject(member.getId())
                 .claim("role", "USER")
                 .claim("no", member.getNo())
+=======
+        Date exp = new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 12);
+
+        String token = Jwts.builder()
+                .setSubject(member.getId())
+                .claim("role", "USER")
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
                 .setExpiration(exp)
                 .signWith(secretKey)
                 .compact();

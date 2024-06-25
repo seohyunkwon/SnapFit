@@ -2,6 +2,7 @@ package com.ssafy.snapfit.controller;
 
 import java.util.List;
 
+<<<<<<< HEAD
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,12 +20,32 @@ import com.ssafy.snapfit.service.FollowService;
 @RestController
 public class FollowController {
 	
+=======
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ssafy.snapfit.model.dto.Member;
+import com.ssafy.snapfit.service.FollowService;
+import com.ssafy.snapfit.service.MemberService;
+
+@RestController
+@RequestMapping("/follow")
+public class FollowController {
+	
+	@Autowired
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	private final FollowService followService;
 	
 	public FollowController(FollowService followService) {
 		this.followService = followService;
 	}
 	
+<<<<<<< HEAD
 	// 1. 특정 유저"가" 팔로우하는 모든 사람들을 조회하기(가져오기) 즉, 특정 유저의 팔로잉 리스트 조회하기(가져오기)
 	@GetMapping("/follow/following/{memberNo}")
 	public ResponseEntity<List<Member>> findAllFollowing(@PathVariable("memberNo") long memberNo) {
@@ -88,6 +109,27 @@ public class FollowController {
 		
 		return new ResponseEntity<>(false, HttpStatus.BAD_REQUEST);
 		
+=======
+	@GetMapping("/following/{no}")
+	public ResponseEntity<?> getFollowing(@PathVariable long no) {
+
+		List<Member> followingList = followService.getFollowings(no);
+		if(followingList == null || followingList.size() == 0) {
+			return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<Member>>(followingList, HttpStatus.OK);
+	
+	}
+	
+	@GetMapping("/follower/{no}")
+	public ResponseEntity<?> getFollower(@PathVariable long no) {
+
+		List<Member> followerList = followService.getFollowers(no);
+		if(followerList == null || followerList.size() == 0) {
+			return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<Member>>(followerList, HttpStatus.OK);
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 	}
 
 }

@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div id="app">
     <VideoDetail v-if="videoStore.currentVideo" :video="videoStore.currentVideo" @next-video="nextVideo"/>
   </div>
@@ -79,3 +80,15 @@ const nextVideo = function(Y) {
   height: 800px;
 }
 </style>
+=======
+    <div id='app'>
+        <VideoDetail></VideoDetail>
+    </div>
+</template>
+
+<script setup>
+import VideoDetail from '@/components/video/VideoDetail.vue';
+</script>
+
+<style scoped></style>
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9

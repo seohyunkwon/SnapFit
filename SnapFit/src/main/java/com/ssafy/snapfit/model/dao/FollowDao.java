@@ -7,6 +7,7 @@ import com.ssafy.snapfit.model.dto.Member;
 
 public interface FollowDao {
 	
+<<<<<<< HEAD
 	// 1. 특정 유저"가" 팔로우하는 모든 사람들을 조회하기(가져오기) 즉, 특정 유저의 팔로잉 리스트 조회하기(가져오기)
 	List<Member> selectAllFollowingMembers(long memberNo);
 	
@@ -23,4 +24,17 @@ public interface FollowDao {
 	// 5. 팔로우라는 "관계"를 삭제하기
 	int deleteFollow(Follow follow);
 	
+=======
+	// 회원 번호에 따른 팔로워 리스트
+	List<Member> selectFollowersByNo(long no);
+	
+	// 회원 번호에 따른 팔로잉 리스트
+	List<Member> selectFollowingsByNo(long no);
+	
+	// 팔로우 생성
+	int insertFollow(Follow follow);
+	
+	// 팔로우 삭제
+	int deleteFollow(Follow follow);
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }

@@ -2,6 +2,7 @@
     <header>
         <nav class="navbar fixed-top bg-white">
             <div class="container-fluid d-flex justify-content-between">
+<<<<<<< HEAD
                 <RouterLink to="/video" class="navbar-brand logo">SNAPFIT</RouterLink>
                 <div class="icon-link">
                     <div class="icon-wrapper">
@@ -9,12 +10,17 @@
                         <span class="tooltip-text" v-show="isTooltipVisible">Logout</span>
                     </div>
                 </div>
+=======
+                <RouterLink to="/video" class="navbar-brand" href="#">SSAFIT</RouterLink>
+                <img src="@/assets/icon/notification.png" class="notification">
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
             </div>
         </nav>
     </header>
 </template>
 
 <script setup>
+<<<<<<< HEAD
 import { useMemberStore } from '@/stores/member';
 import { ref } from 'vue'
 const memberStore = useMemberStore()
@@ -24,12 +30,16 @@ let isTooltipVisible = ref(false);
 const logout = () => {
     memberStore.logout()
 }
+=======
+
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 </script>
 
 <style scoped>
 header {
     width: 100%;
 }
+<<<<<<< HEAD
 
 
 <style scoped>
@@ -79,6 +89,12 @@ header {
 }
 
 
+=======
+.logo {
+    color: white;
+}
+
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 .fixed-top {
     height: 80px;
 }
@@ -89,6 +105,7 @@ header {
     letter-spacing: 0.3rem;
 }
 
+<<<<<<< HEAD
 .logout {
     width: 25px;
     margin-right: 20px;
@@ -127,5 +144,10 @@ header {
 .icon-wrapper:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
+=======
+.notification {
+    width: 35px;
+    margin-right: 10px;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }
 </style>

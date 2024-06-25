@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <div class="app">
     <div class="title">
@@ -12,10 +13,24 @@
       </h1>
     </div>
 
+=======
+<script setup>
+</script>
+
+<template>
+  <div class="app">
+    <!-- 어플리케이션 이름 -->
+    <div class="title">
+      <h1>SSAFIT</h1>
+    </div>
+
+    <!-- 로그인 버튼 -->
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
     <RouterLink to="/login" class="btn btn-login">
       로그인
     </RouterLink>
 
+<<<<<<< HEAD
     <button class="btn btn-kakao-login" @click="memberStore.kakaoLogin">
       카카오 로그인
     </button>
@@ -34,6 +49,20 @@ const memberStore = useMemberStore()
 
 </script>
 
+=======
+    <!-- 카카오 로그인 버튼 -->
+    <button class="btn btn-kakao-login">
+      카카오 로그인
+    </button>
+
+    <!-- 회원가입 -->
+    <div class="signup">
+      <RouterLink to="/signup">회원가입</RouterLink>    </div>
+
+  </div>
+</template>
+
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 <style scoped>
 .app {
   background: url(@/assets/index.jpg), #f4f4f4;
@@ -42,15 +71,23 @@ const memberStore = useMemberStore()
 
 .title {
   color: white;
+<<<<<<< HEAD
+=======
+  font-size: 30px;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+<<<<<<< HEAD
 }
 span {
   font-size: 60px;
   letter-spacing: 0.2em;
   font-family: 'Bagel Fat One' !important;
+=======
+  letter-spacing: 0.3em;
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }
 
 .btn-login {
@@ -96,6 +133,7 @@ span {
 .signup:hover {
   font-size: 24px;
 }
+<<<<<<< HEAD
 /* 페이드 인 및 슬라이드 인 애니메이션 정의 */
 @keyframes fadeInSlideIn {
   0% {
@@ -144,4 +182,6 @@ h1 {
   animation: fadeInSlideIn 2s ease-out, bounce 3s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+=======
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 </style>

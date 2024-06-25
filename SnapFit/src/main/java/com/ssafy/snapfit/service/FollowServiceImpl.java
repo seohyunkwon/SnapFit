@@ -12,6 +12,7 @@ import com.ssafy.snapfit.model.dto.Member;
 public class FollowServiceImpl implements FollowService {
 	
 	private final FollowDao followDao;
+<<<<<<< HEAD
 	
 	public FollowServiceImpl(FollowDao followDao) {
 		this.followDao = followDao;
@@ -84,4 +85,32 @@ public class FollowServiceImpl implements FollowService {
 		
 	}
 	
+=======
+
+	public FollowServiceImpl(FollowDao followDao) {
+		this.followDao = followDao;
+	}
+	
+	@Override
+	public List<Member> getFollowers(long no) {
+		return followDao.selectFollowersByNo(no);
+	}
+	
+	@Override
+	public List<Member> getFollowings(long no) {
+		return followDao.selectFollowingsByNo(no);
+	}
+
+	@Override
+	public boolean follow(Follow follow) {
+		int result = followDao.insertFollow(follow);
+		return result == 1;
+	}
+
+	@Override
+	public boolean unFollow(Follow follow) {
+		int result = followDao.deleteFollow(follow);
+		return result == 1;
+	}
+>>>>>>> 8e10c84053784300036ed377facd88c57e1ee5f9
 }
